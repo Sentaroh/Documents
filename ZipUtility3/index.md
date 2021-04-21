@@ -3,7 +3,7 @@
 ### Description
 
 - [Feature Description](https://sentaroh.github.io/Documents/ZipUtility3/ZipUtility3_Desc_EN_Short.htm)
-- [Feature Description](https://sentaroh.github.io/Documents/ZipUtility3/ZipUtility3_Desc_FR_Short.htm)
+- [Description de la fonction](https://sentaroh.github.io/Documents/ZipUtility3/ZipUtility3_Desc_FR_Short.htm)
 - [機能の説明](https://sentaroh.github.io/Documents/ZipUtility3/ZipUtility3_Desc_JA_Short.htm)
 
 ### Privacy policy
