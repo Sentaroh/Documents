@@ -1,0 +1,1042 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>SMBSync Description</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+h1
+	{mso-style-link:"見出し 1 \(文字\)";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	word-break:break-all;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h2
+	{mso-style-link:"見出し 2 \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h3
+	{mso-style-link:"見出し 3 \(文字\)";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.0pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+h5
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h6
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"見出しマップ \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"MS UI Gothic";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"吹き出し \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	color:#365F91;
+	font-weight:bold;}
+p.148mm, li.148mm, div.148mm
+	{mso-style-name:"スタイル 左 \:  14\.8 mm";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.2Century, li.2Century, div.2Century
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:14.0pt;
+	font-family:"Century","serif";
+	text-decoration:underline;}
+span.2
+	{mso-style-name:"見出し 2 \(文字\)";
+	mso-style-link:"見出し 2";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.2Century0
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.a
+	{mso-style-name:"吹き出し \(文字\)";
+	mso-style-link:吹き出し;
+	font-family:"Arial","sans-serif";}
+span.a0
+	{mso-style-name:"見出しマップ \(文字\)";
+	mso-style-link:見出しマップ;
+	font-family:"MS UI Gothic";}
+span.1
+	{mso-style-name:"見出し 1 \(文字\)";
+	mso-style-link:"見出し 1";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.3
+	{mso-style-name:"見出し 3 \(文字\)";
+	mso-style-link:"見出し 3";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:42.55pt 3.0cm 42.55pt 3.0cm;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.0pt'>
+
+<p class=MsoTocHeading><a name="_Toc450110949"></a><span lang=JA>Table des
+matières</span></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc58149926">1.Sync<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149927">1.1. Y
+a-t-il une synchronisation bidirectionnelle ?<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149928">1.2. Filtre
+de fichiers : synchronisation de types de fichiers spécifiques (exp. PDF,
+Excel...)<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149929">1.3.
+L'heure de la dernière modification du fichier cible n'est pas conservée<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149930">1.4. Les
+fichiers sur la cible sont écrasés à la première synchronisation<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149931">1.5.
+Impossible de démarrer la synchronisation pendant le sommeil<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149932">1.6.
+L'application ne peut pas activer et désactiver le WiFi sur Android 10<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149933">1.7. Vous
+voulez commencer la synchronisation uniquement dans certains endroits (comme la
+maison)<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc58149934">2. Archives<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149935">2.1.
+Comment stocker des photos et des vidéos dans un dossier année / mois de
+tournage<span style='color:windowtext;display:none;text-decoration:none'>  </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc58149936">3.
+Connexion avec les applications externes<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149937">3.1. Comment
+synchroniser à partir d'une application externe ?<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc4><a href="#_Toc58149938">3.1.1. Exemple de Tasker<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc4><a href="#_Toc58149939">3.1.2. Exemple d'AutoMagic<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc58149940">4.SDCARD/USB<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149941">4.1.
+SMBSync2 ne reconnaît pas les supports SDCARD ou USB<span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc58149942">5.
+Questions relatives au réseau<span style='color:windowtext;display:none;
+text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149943">5.1.
+Impossible de se connecter au serveur SMB avec un nom d'hôte<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc58149944">5.2.
+Comment utiliser les filtres dans la liste d'adresses IP<span style='color:
+windowtext;display:none;text-decoration:none'>.. </span><span style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc58149945">6. Divers<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc58149946">6.1.
+Sauvegarde et restauration de la liste des tâches et des paramètres<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc450110990"></a><a name="_Toc58149926">1.Sync</a></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149927">1.1. Y a-t-il une
+synchronisation bidirectionnelle ?</a></h3>
+
+<p class=MsoNormal>La synchronisation bidirectionnelle n'est pas mise en œuvre
+car il est difficile de juger des fichiers conflictuels (fichiers mis à jour
+des deux côtés, quel fichier est le plus récent, quel fichier conserver...).
+J'envisage de la mettre en œuvre à l'avenir.</p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149928">1.2. Filtre de fichiers :
+synchronisation de types de fichiers spécifiques (exp. PDF, Excel...)</a></h3>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>Après avoir sélectionné la
+fonction &quot;Sélectionner un fichier&quot; de la tâche de synchronisation,
+appuyez sur le filtre de fichier et ajoutez le filtre. Veuillez décrire le
+filtre comme *.pdf ou *.xlsx.</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Écran de synchronisation des tâches d'édition</p>
+
+<p class=MsoNormal><img width=385 height=216
+src="SMBSync2_FAQ_FR.files/image003.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Modifier le filtre de fichiers</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img width=385 height=216
+src="SMBSync2_FAQ_FR.files/image004.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-before:always'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Enregistrez le filtre de fichier : vous pouvez le définir comme
+inclus (ne synchroniser que les fichiers ayant l'extension *.pdf spécifiée dans
+l'exemple), ou exclu (ne pas synchroniser les fichiers ayant l'extension *.pdf
+spécifiée dans cet exemple)</p>
+
+<p class=MsoNormal><img width=385 height=216
+src="SMBSync2_FAQ_FR.files/image005.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Terminé</p>
+
+<p class=MsoNormal><img width=384 height=216
+src="SMBSync2_FAQ_FR.files/image006.png"></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149929">1.3. L'heure de la
+dernière modification du fichier cible n'est pas conservée</a></h3>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>Lorsque la cible se trouve
+sur le stockage interne ou sur la carte SD, la plupart des systèmes Android ne
+permettent pas de régler l'heure de la dernière modification du fichier cible
+pour qu'elle corresponde à l'heure du fichier source. Lorsque la cible est une
+SMB (PC/NAS), ou un stockage OTG-USB, cela ne pose généralement pas de
+problème.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>L'heure de la dernière
+modification du stockage interne et de la SDCARD est toujours correctement mise
+à jour et synchronisée entre le maître et la cible sur Android 5/6. Sur Android
+7 et suivants, l'heure du fichier ne peut plus être modifiée, mais cela reste
+possible sur certains modèles.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>SMSync2 détecte si l'heure/la
+date peut être réglée sur la cible pour correspondre au fichier source. Si ce
+n'est pas le cas, la dernière heure de mise à jour du fichier est enregistrée
+dans les fichiers de la base de données de l'application. Elle est ensuite
+utilisée pour comparer les fichiers et vérifier s'ils diffèrent dans le temps.
+Dans ce cas, si vous essayez de synchroniser la paire maître/cible avec une
+application tierce ou si les fichiers de données SMBSync2 sont effacés, les
+fichiers sources seront à nouveau copiés sur la cible. Vous pouvez régler
+l'option &quot;Ne pas écraser le fichier de destination s'il est plus récent
+que le maître&quot; en plus de la comparaison par taille pour surmonter ce
+problème.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149930">1.4. Les fichiers sur la
+cible sont écrasés à la première synchronisation</a></h3>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>Pour
+les modèles qui ne peuvent pas mettre à jour l'heure de la dernière
+modification du fichier cible, lors de la première synchronisation, SMBSync2
+stockera la liste des fichiers avec leurs horodatages dans sa base de données
+(cf. 1.3). Comme la base de données doit être créée la première fois, tous les
+fichiers ayant le même nom et la même taille seront à nouveau écrasés par une
+copie complète du fichier maître. Lors des synchronisations suivantes, la base
+de données sera utilisée et l'écrasement de tous les fichiers de même nom et de
+même taille ne sera plus effectué.</span></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149931">1.5. Impossible de
+démarrer la synchronisation pendant le sommeil</a></h3>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>Si
+votre appareil est en veille et que vous ne pouvez pas démarrer la
+synchronisation à partir d'un horaire ou d'une application externe, essayez les
+méthodes suivantes.</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Ne pas optimiser la batterie (menu App-&gt; afficher l'optimiser la
+batterie).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'><img
+width=162 height=288 src="SMBSync2_FAQ_FR.files/image007.png"><img width=165
+height=294 src="SMBSync2_FAQ_FR.files/image008.png">  <img width=165
+height=294 src="SMBSync2_FAQ_FR.files/image009.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Permettre à l'application de démarrer automatiquement lorsque
+l'appareil redémarre (Paramètres système sur certains modèles-&gt; batterie).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-before:always;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Autoriser le démarrage en arrière-plan (Paramètres système sur
+certains modèles-&gt; batterie).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'><img
+width=256 height=410 id="図 12" src="SMBSync2_FAQ_FR.files/image010.png"><span
+style='font-size:12.0pt'> </span><img width=256 height=410 id="図 13"
+src="SMBSync2_FAQ_FR.files/image011.png"> </p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Donnez à l'application tierce la permission d'activer le WiFi
+(certains modèles exigent que vous autorisiez les privilèges WiFi).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Activez le verrouillage Wi-Fi et activez &quot;Prévention du
+retard de démarrage de la synchronisation pendant le sommeil&quot; (onglet App
+Settings Sync).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'><img
+width=177 height=313 src="SMBSync2_FAQ_FR.files/image012.png"></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149932">1.</a>6. L'application ne
+peut pas activer et désactiver le WiFi sur Android 10</h3>
+
+<p class=MsoNormal align=left style='text-align:left'>Certains modèles
+d'Android 10 peuvent ne plus permettre aux applications d'activer et de
+désactiver le WiFi, alors veuillez envisager d'activer le WiFi manuellement.</p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149933"></a><a name="_Toc57325965"></a><a
+name="_Toc57325007">1.7.</a> Vous voulez commencer la synchronisation
+uniquement dans certains endroits (comme la maison)</h3>
+
+<p class=MsoNormal align=left style='text-align:left'>Vous pouvez commencer la
+synchronisation lorsque vous vous connectez à un WiFi spécifique par l'une des
+méthodes suivantes</p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Modifiez l'adresse IP de votre routeur WiFi pour qu'elle soit différente
+de 192.168.0.0/24 et ajoutez-la à la liste des adresses IP.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left'><img
+width=217 height=397 src="SMBSync2_FAQ_FR.files/image013.jpg"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt;page-break-after:avoid'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Fixez l'adresse IP du côté d'Android et enregistrez-la dans la liste des
+adresses IP.</p>
+
+<p class=MsoNormal align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'><span style='font-size:10.5pt'>Paramètres du
+système-&gt;Réseau et Internet-&gt;WiFi-&gt;Sélectionnez votre SSID</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:36.0pt;
+page-break-after:avoid'><span style='font-size:10.5pt'>Appuyez sur le bouton
+Modifier ICON en haut de l'écran</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'>Modifiez les paramètres IP de manière statique et
+entrez &quot;192.168.0.100&quot; pour l'adresse IP</p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'><img width=201 height=367
+src="SMBSync2_FAQ_FR.files/image014.jpg"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'>Modifiez la tâche de synchronisation et sélectionnez la
+liste d'adresses IP dans les options WiFi et enregistrez-la dans la liste
+d'adresses IP.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'><img width=201 height=367 id="図 9"
+src="SMBSync2_FAQ_FR.files/image015.jpg"></p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc58149934">2. Archives</a></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149935">2.1. Comment stocker des
+photos et des vidéos dans un dossier année / mois de tournage</a></h3>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>Touchez
+le dossier cible dans la tâche Archive pour afficher les paramètres spécifiques
+de synchronisation des archives. Veuillez activer les options suivantes.</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Ajouter l'heure/la date de synchronisation au nom du
+répertoire... ajoutera l'heure et la date d'exécution de la synchronisation au
+nom du dossier cible</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Ajouter l'heure et la date de la prise de vue photo/vidéo au nom
+du répertoire... ajoutera l'heure et la date auxquelles le média a été pris au
+nom du dossier cible</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'><img
+width=216 height=384 src="SMBSync2_FAQ_FR.files/image016.png"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc58149936">3. Connexion avec les
+applications externes</a></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149937">3.1. Comment synchroniser
+à partir d'une application externe ?</a></h3>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>Pour plus de détails, voir le
+PDF &quot;5. Liens avec d'autres demandes&quot; sur le lien suivant.</span></p>
+
+<p class=MsoNormal><a
+href="https://drive.google.com/file/d/0B77t0XpnNT7OSzBzcV9SemEwbkE/view?usp=sharing"><span
+style='font-size:10.5pt'>https://drive.google.com/file/d/0B77t0XpnNT7OSzBzcV9SemEwbkE/view?usp=sharing</span></a></p>
+
+<h4><a name="_Toc58149938">3.1.1. Exemple de Tasker</a></h4>
+
+<p class=MsoNormal style='page-break-after:avoid'><img border=0 width=385
+height=612 id="図 18" src="SMBSync2_FAQ_FR.files/image017.jpg"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=FR-CH style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=FR-CH style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Action
+: com.sentaroh.android.SMBSync2.ACTION_START_SYNC</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Extra
+: SyncProfile:prof1, prof2</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Target
+: Activity</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Voir le lien ci-dessous pour des exemples de tâches.</p>
+
+<p class=MsoNormal><a
+href="https://drive.google.com/file/d/1AV1pIXlaR9yXlam3TTXBR85m-g22SXSr/view?usp=sharing">https://drive.google.com/file/d/1AV1pIXlaR9yXlam3TTXBR85m-g22SXSr/view?usp=sharing</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h4><a name="_Toc58149939">3.1.2. Exemple d'AutoMagic</a></h4>
+
+<p class=MsoNormal style='page-break-after:avoid;word-break:break-all'><span
+style='font-size:10.5pt'><img border=0 width=389 height=665 id="図 19"
+src="SMBSync2_FAQ_FR.files/image018.jpg"></span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid;word-break:break-all'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Action type : Start Activity</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid;word-break:break-all'><span lang=FR-CH style='font-family:
+Symbol'><img width=11 height=11 src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=FR-CH>Action : com.sentaroh.android.SMBSync2.ACTION_START_SYNC</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid;word-break:break-all'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Extra : putString(“SyncProfile”,”prof1, prof2”);</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'>Voir le lien ci-dessous
+pour des exemples de tâches.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a
+href="https://drive.google.com/file/d/1-0uQtq9tpnGTDWmv7_BfNo2PFvmte8h8/view?usp=sharing">https://drive.google.com/file/d/1-0uQtq9tpnGTDWmv7_BfNo2PFvmte8h8/view?usp=sharing</a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc58149940">4.SDCARD/USB</a></h2>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc59519666"></a><a name="_Toc58149375">4.1.</a>
+How to grant access to SDCARD/USB media</h2>
+
+<p class=MsoNormal>You can grant access permissions from the Master/Target
+folder or menu.</p>
+
+<p class=MsoNormal><img border=0 width=140 height=254 id="オブジェクト 2"
+src="SMBSync2_FAQ_FR.files/image019.png"></p>
+
+<p class=MsoNormal>The following figure is an example of SDCARD; for USB,
+replace SD card with USB.</p>
+
+<p class=MsoNormal><img border=0 width=568 height=243 id="オブジェクト 3"
+src="SMBSync2_FAQ_FR.files/image020.png"></p>
+
+<p class=MsoNormal><span style='position:absolute;z-index:1;left:0px;
+margin-left:-209px;margin-top:13px;width:36px;height:42px'><img width=36
+height=42 src="SMBSync2_FAQ_FR.files/image021.png"></span><span
+style='position:absolute;z-index:2;left:0px;margin-left:-325px;margin-top:21px;
+width:109px;height:42px'><img width=109 height=42
+src="SMBSync2_FAQ_FR.files/image022.png"></span>On Android 7/8/9/10, the
+following screen will appear, please allow it.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=139
+height=254 src="SMBSync2_FAQ_FR.files/image023.jpg"><br clear=all
+style='page-break-before:always'>
+</p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc59519667"></a><a name="_Toc58149376">4.2.</a>
+SDCARD or USB media is not recognized by the application</h2>
+
+<p class=MsoNormal>For SMBSync2, the SDCARD or USB media must be mounted in
+/storage/xxxx-xxxx. (xxxx-xxxx is a UUID and is a combination of alphanumeric
+characters.)</p>
+
+<p class=MsoNormal>You can check the system information to see if it is
+mounted, or if it is a USB drive, check the system information after connecting
+the USB drive.</p>
+
+<p class=MsoNormal><span style='position:absolute;z-index:5;left:0px;
+margin-left:-3px;margin-top:44px;width:434px;height:62px'><img width=434
+height=62 src="SMBSync2_FAQ_FR.files/image024.png"></span><img border=0
+width=495 height=310 src="SMBSync2_FAQ_FR.files/image025.jpg"
+alt="Screenshot_20201222_084027_com.sentaroh.android.SMBSync2"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SDCARD</p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt'><span style='font-size:
+9.0pt'>Must be mounted on a mount point.</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>USB<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>メディア</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Wingdings'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:9.0pt'>Must be mounted on a mount point.</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Wingdings'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:9.0pt'>Must be recognized as USB in
+Storage Manager</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Wingdings'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:9.0pt'>Due to the design of SMBSync2, if
+you connect a card reader or other device to the USB-OTG and connect multiple
+media, you will not be able to use it, please use only one media.</span></p>
+
+<p class=MsoNormal><span style='position:absolute;z-index:6;left:0px;
+margin-left:-3px;margin-top:159px;width:434px;height:62px'><img width=434
+height=62 src="SMBSync2_FAQ_FR.files/image024.png"></span><img border=0
+width=500 height=314 id="図 4" src="SMBSync2_FAQ_FR.files/image026.jpg"
+alt="Screenshot_20201222_084027_com.sentaroh.android.SMBSync2"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc59519668">4.3. Force the media to be
+recognized as USB.</a></h2>
+
+<p class=MsoNormal align=left style='text-align:left'>If the USB media
+connected to the USB-OTG is not recognized as USB, please follow the steps
+below to force it to be recognized.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='color:red'>The UUID registered here cannot be used as an SDCARD.</span></u></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Select &quot;Edit USB UUID List&quot; from the menu.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=373
+height=172 id="オブジェクト 1" src="SMBSync2_FAQ_FR.files/image027.png"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Tap “Add UUID” button</p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=372
+height=172 src="SMBSync2_FAQ_FR.files/image028.png"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Tap the UUID of the USB media to select it (in the example below,
+&quot;FFEF-11E7&quot; is selected), and then tap &quot;Add&quot;.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=372
+height=172 id="図 5" src="SMBSync2_FAQ_FR.files/image029.png"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Tap “Save” button</p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=372
+height=172 id="図 6" src="SMBSync2_FAQ_FR.files/image030.png"></p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><a name="_Toc326958"><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></a></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc58149942">5.</a> Questions relatives
+au réseau</h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149943"></a><a name="_Toc326959">5.1.</a>
+Impossible de se connecter au serveur SMB avec un nom d'hôte</h3>
+
+<p class=MsoNormal>Si le nom d'hôte est spécifié pour accéder au serveur SMB,
+et que le serveur SMB est connecté par un réseau virtuel fonctionnant dans une
+machine virtuelle dans un environnement tel que VirtualBox, la résolution
+d'adresse à partir du nom d'hôte échouera.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Elle peut être résolue par l'une des méthodes suivantes.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Démarrer la machine virtuelle</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Désactiver l'adaptateur de réseau virtuel</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Si l'une des méthodes ci-dessus ne permet pas de résoudre le
+problème de connexion, indiquez l'adresse IP au lieu du nom d'hôte</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc326960"></a><a name="_Toc58149944"></a><a
+name="_Toc56088468">5.2.</a> Comment utiliser les filtres dans la liste
+d'adresses IP</h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.5pt'>Vous pouvez utiliser des jokers dans les filtres de la liste d'adresses
+IP.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.5pt'>Exemples de filtres :</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.5pt'>&quot;192.168.*&quot;         : 192.168.0.0 - 192.168.255.255 est
+autorisé</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.5pt'>&quot;192.168.*. *&quot;     : 192.168.0.0 - 192.168.255.255 est
+autorisé</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.5pt'>&quot;192.168.100.*&quot;   : 192.168.100.0 - 192.168.100.255 est
+autorisé</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=217
+height=397 id="図 3" src="SMBSync2_FAQ_FR.files/image031.jpg"></p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc58149945"></a><a name="_Toc326962">6.</a>
+Divers</h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc58149946"></a><a name="_Toc326963">6.1.</a>
+Sauvegarde et restauration de la liste des tâches et des paramètres</h3>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>Vous pouvez enregistrer la
+liste des tâches, les horaires prévus et les paramètres de l'application sur un
+support de stockage interne, SDCARD ou USB. Vous pouvez également restaurer de
+manière sélective les paramètres sauvegardés.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>SMBSync2 sauvegarde
+automatiquement tous ces paramètres lorsqu'ils sont modifiés dans
+l'application. Vous pouvez également enregistrer manuellement les paramètres.</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sauvegarder les paramètres</p>
+
+<p class=MsoListParagraph style='margin-left:20.9pt'>Dans le menu App, appuyez
+sur &quot;Exporter les paramètres&quot; pour spécifier la destination. Lorsque
+vous touchez le point de montage, la liste des stockages disponibles s'affiche.
+Vous pouvez sélectionner votre stockage préféré pour exporter les paramètres de
+l'application.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>Vous pouvez également
+crypter le fichier exporté.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'><span style='position:
+absolute;z-index:4;left:0px;margin-left:321px;margin-top:235px;width:152px;
+height:52px'><img width=152 height=52 src="SMBSync2_FAQ_FR.files/image032.png"
+alt="四角形吹き出し: Please select"></span><img border=0 width=221 height=392 id="図 10"
+src="SMBSync2_FAQ_FR.files/image033.png"><span style='position:absolute;
+z-index:3;left:0px;margin-left:50px;margin-top:67px;width:151px;height:65px'><img
+width=151 height=65 src="SMBSync2_FAQ_FR.files/image034.png"
+alt="四角形吹き出し: Tap here"></span> <img border=0 width=221 height=392 id="図 11"
+src="SMBSync2_FAQ_FR.files/image035.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_FR.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Restaurer les paramètres</p>
+
+<p class=MsoListParagraph style='margin-left:20.9pt'>Dans le menu App, appuyez
+sur &quot;Importer les paramètres&quot; et sélectionnez le fichier de
+paramètres à importer.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>Vous pouvez importer
+sélectivement chaque élément : paramètres globaux de l'application, paramètres
+du calendrier des tâches, tâches individuelles enregistrées.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

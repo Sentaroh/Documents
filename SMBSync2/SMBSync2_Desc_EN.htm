@@ -1,0 +1,3464 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>SMBSync Description</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+h1
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	word-break:break-all;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h2
+	{mso-style-link:"見出し 2 \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+h5
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h6
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:39.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2
+	{mso-style-link:"本文字下げ 2 \(文字\)";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"見出しマップ \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"MS UI Gothic";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.148mm, li.148mm, div.148mm
+	{mso-style-name:"スタイル 左 \:  14\.8 mm";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.2Century, li.2Century, div.2Century
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Century","serif";
+	text-decoration:underline;}
+span.2Century0
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	font-family:"Century","serif";}
+p.318pt, li.318pt, div.318pt
+	{mso-style-name:"スタイル 見出し 3 + 段落前 \:  18 pt";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+p.21, li.21, div.21
+	{mso-style-name:"スタイル 見出し 2 + 段落前 \:  1 行";
+	margin-top:18.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.a
+	{mso-style-name:"見出しマップ \(文字\)";
+	mso-style-link:見出しマップ;
+	font-family:"MS UI Gothic";}
+span.2
+	{mso-style-name:"本文字下げ 2 \(文字\)";
+	mso-style-link:"本文字下げ 2";}
+p.20mm8261, li.20mm8261, div.20mm8261
+	{mso-style-name:"スタイル 見出し 2 + 左 \:  0 mm ぶら下げインデント \:  8\.26 字 段落前 \:  1 行";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:41.4pt;
+	margin-bottom:.0001pt;
+	text-indent:-41.4pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.alt-edited
+	{mso-style-name:alt-edited;}
+span.20
+	{mso-style-name:"見出し 2 \(文字\)";
+	mso-style-link:"見出し 2";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.tlid-translation
+	{mso-style-name:tlid-translation;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:40.6pt 3.0cm 49.65pt 3.0cm;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.0pt'>
+
+<p class=MsoToc1><a name="_top"></a><a name="_1.機能"></a><span
+class=MsoHyperlink><a href="#_Toc62936233">1.Function<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc1><a href="#_Toc62936234">2.Sync settings<span style='color:
+windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936235">2.1. Sync Task<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936236">2.1.1. Mater/Target folder (SMB)<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936237">2.1.2.Master/Target folder(Internal
+Storage)<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936238">2.1.3.Master/Target folder(SDCARD)<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936239">2.1.4.Master/Target folder(USB Media)<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936240">2.1.5.Archive option<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936241">2.1.6.Master/Target folder(ZIP)<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>16</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936242">2.2.File filter<span style='color:
+windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936243">2.2.1.File name filter<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936244">2.2.2.File size filter<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936245">2.2.3.File last modified date filter<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936246">2.3.Directory selection filter<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>19</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc62936247">3.Tab Description<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>22</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936248">3.1.Task tab<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>22</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936249">3.1.1.Basic mode<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>22</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936250">3.1.2.Selection mode<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936251">3.2.Schedule tab<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936252">3.2.1.Editing the Schedule<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936253">3.2.2.Sync task list<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>25</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936254">3.3.History tab<span style='color:
+windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936255">3.3.1.Basic mode<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936256">3.3.2.Selection mode<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>27</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936257">3.4.Message tab<span style='color:
+windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>28</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc62936258">4.Description of the Menu<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936259">4.1.Sync<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936260">4.2.Show log<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936261">4.3.Export task<span style='color:
+windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936262">4.4.Import task<span style='color:
+windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936263">4.5.Manage log file<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936264">4.6.Maintaince Admin files<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936265">4.7.Settings<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936266">4.7.1.Synchronization<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936267">4.7.2.User interface<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936268">4.7.3.Log<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936269">4.7.4.SMB Settings<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>31</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936270">4.7.5.Security<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>31</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936271">4.7.5.1.Security settings<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>31</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936272">4.7.6.Miscellaneous<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>32</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936273">4.8.Kill the application<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>32</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936274">4.9.About SMBSync2<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>32</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936275">4.10.Edit USB UUID List<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936276">4.11.About SMBSync2<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936277">4.12.System Information<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc62936278">5.Starting from other applications<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>34</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936279">5.1.Starting from other applications<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>34</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc62936280">5.1.1.Example for Tasker<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>35</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936281">5.2.Notification of synchronization
+start and end<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>36</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc62936282">5.3.Sample code for start SMBSync2 by
+Application<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc62936283">7.Library<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc62936284">8.About collecting and sending data in
+the app<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc62936285">9.Acknowledgments<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>40</span></a></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc62936233">1.Function</a></h1>
+
+<p class=MsoBodyText>SMBSync 2 is a tool for synchronizing files via wireless
+LAN using SMB1, SMB2 or SMB3 protocol between the internal storage of Android
+terminal, SDCARD and PC/NAS. Synchronization is a one-way from the master to
+the target, mirror, move, copy, archive can be used. (Internal storage, SDCARD,
+SMB, ZIP combination is possible)</p>
+
+<p class=MsoBodyText>You can start the synchronization by external application
+(Tasker, AutoMagic etc) or SMBSync2 schedule. Please refer to the <a
+href="#_Starting_from_other">Starting from other applications</a> for interface
+with an external application.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Mirror</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>If master and target files are different, to
+copied files from master to the target directory. To delete target files and
+directories if does not exist in the master.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Move</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>If master and target files are different, to
+copied files from master to the target directory. To delete the master
+directories and files copied to the target.</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>However, the master and target same name, same
+file modification time and file size, to delete the file on the master without
+copying files.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Copy</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>If master and target files are different, to
+copied files from master to the target directory. However, the same file
+modification time and file size with the same name does not copy the master and
+target.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Archive</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>Move photos and videos in the directory on the
+master side to the target under conditions such as shooting date/time than the
+date and time of archive execution, such as 7 days or earlier or 30 days or
+earlier. (However, ZIP can not be used for target)</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>If the determination is
+satisfied and the differential file one of the following three conditions.</p>
+
+<p class=MsoListBullet align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>File does not exist</p>
+
+<p class=MsoListBullet align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Different file sizes</p>
+
+<p class=MsoListBullet align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Different over when last updated 3 seconds</p>
+
+<p class=MsoListBullet align=left style='margin-left:0cm;text-align:left;
+text-indent:0cm'>&nbsp;</p>
+
+<p class=MsoListBullet align=left style='text-align:left'>About the last update
+time of the synchronized file</p>
+
+<p class=MsoListBullet align=left style='margin-left:36.0pt;text-align:left'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Internal storage</p>
+
+<p class=MsoListBullet align=left style='text-align:left;text-indent:18.0pt'>It
+is the same as the source file. For some models, the time will be sync.</p>
+
+<p class=MsoListBullet align=left style='margin-left:36.0pt;text-align:left'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SMB sharing</p>
+
+<p class=MsoListBullet align=left style='text-align:left;text-indent:18.0pt'>It
+is the same as the source file. However, some NAS will be sync time.</p>
+
+<p class=MsoListBullet align=left style='margin-left:36.0pt;text-align:left'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SDCARD</p>
+
+<p class=MsoListBullet align=left style='margin-left:36.0pt;text-align:left;
+text-indent:0cm'>On Android 7.0 and higher it is the same as the source file.
+However, some models are sync time.</p>
+
+<p class=MsoListBullet align=left style='margin-left:36.0pt;text-align:left'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>USB media</p>
+
+<p class=MsoListBullet align=left style='margin-left:36.0pt;text-align:left;
+text-indent:0cm'>On Android 7.0 and higher it is the same as the source file.
+However, some models are sync time.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:0cm'>&nbsp;</p>
+
+<p class=MsoListBullet align=left style='margin-left:0cm;text-align:left;
+text-indent:0cm'>If you want to sync on a schedule sync or background in
+Android 6.0 or higher, please disable the optimization of the battery. (Menu
+-&gt; Disable battery optimization)</p>
+
+<p class=MsoListBullet align=left style='margin-left:0cm;text-align:left;
+text-indent:0cm'>&nbsp;</p>
+
+<p class=MsoListBullet align=left style='margin-left:0cm;text-align:left;
+text-indent:0cm'>If the response is not returned from the application when
+displaying the message tab at the time of sync execution, please try setting
+-&gt; others -&gt; Enable ”Text processing of sync messages”.</p>
+
+<p class=MsoListBullet align=left style='margin-left:0cm;text-align:left;
+text-indent:0cm'>&nbsp;</p>
+
+<p class=MsoListBullet align=left style='margin-left:0cm;text-align:left;
+text-indent:0cm'><a href="#_top">Return to Index</a> </p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc62936234">2.Sync settings</a></h1>
+
+<h2><a name="_Toc62936235">2.1. Sync Task</a></h2>
+
+<p class=MsoBodyText align=left style='text-align:left'>Click on the additional
+synchronization task in the Tasks tab.</p>
+
+<p class=MsoNormal align=left style='margin-left:1.0cm;text-align:left;
+text-indent:-1.0cm;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Help button</p>
+
+<p class=MsoNormal align=left style='margin-left:1.0cm;text-align:left;
+page-break-after:avoid'>When you tap to display the help for each item. Please
+press the Back button to exit the help.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Test mode</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>It
+does not perform overwrite and delete the file if you check. Please be tested
+when you create a synchronization task, files that are copied or deleted can be
+found in the message tab.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span> Auto sync task</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>If
+checked the task to the automatic. Tasks that are set to automatic
+synchronization will start when you press the sync button.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Task name</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Specify
+task name.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync type</p>
+
+<p class=MsoNormal style='margin-left:24.0pt;page-break-after:avoid'>The sync
+method is selected from mirror, copy, move, archive. <b><u><span
+style='color:red'>Sync is done from master to target in one direction.</span></u></b></p>
+
+<p class=MsoNormal align=left style='margin-left:27.45pt;text-align:left;
+text-indent:-2.65pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Mirror</p>
+
+<p class=MsoNormal align=left style='margin-left:27.45pt;text-align:left;
+text-indent:-2.65pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Move</p>
+
+<p class=MsoNormal align=left style='margin-left:27.45pt;text-align:left;
+text-indent:-2.65pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Copy</p>
+
+<p class=MsoNormal align=left style='margin-left:27.45pt;text-align:left;
+text-indent:-2.65pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>Archive</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Swap the master and target</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Swap
+the master and target</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Master folder</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Edit
+master folder</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Target folder</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Edit
+target folder</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Select files for sync</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>If
+you do not check and then sync all of the file. If you check to see details.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:49.35pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>File name filter</p>
+
+<p class=MsoListParagraph align=left style='margin-left:70.35pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Wingdings'>Ø<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>Sync audio files</p>
+
+<p class=MsoBodyText align=left style='margin-left:17.85pt;text-align:left;
+text-indent:53.05pt'>If you check to synchronize the files of the following
+extensions.</p>
+
+<p class=MsoBodyText align=left style='margin-left:52.4pt;text-align:left;
+text-indent:18.5pt'>aac, aif, aifc, aiff, kar, flac, m3u, m4a, mid, midi, mp2,
+mp3, mpga,</p>
+
+<p class=MsoBodyText align=left style='margin-left:17.85pt;text-align:left;
+text-indent:53.05pt'>ogg, ra, ram, wav</p>
+
+<p class=MsoListParagraph align=left style='margin-left:70.35pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Wingdings'>Ø<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>Sync image files</p>
+
+<p class=MsoBodyText align=left style='margin-left:17.85pt;text-align:left;
+text-indent:53.05pt'>If you check to synchronize the files of the following
+extensions.</p>
+
+<p class=MsoBodyText align=left style='margin-left:17.85pt;text-align:left;
+text-indent:53.05pt'>bmp, cgm, djv, djvu, gif, ico, ief, jpe, jpeg, jpg, pbm,
+pgm, png, tif, tiff</p>
+
+<p class=MsoListParagraph align=left style='margin-left:70.35pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Wingdings'>Ø<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span>Sync video files</p>
+
+<p class=MsoBodyText align=left style='margin-left:17.85pt;text-align:left;
+text-indent:53.05pt'>If you check to synchronize the files of the following
+extensions.</p>
+
+<p class=MsoBodyText align=left style='margin-left:17.85pt;text-align:left;
+text-indent:53.05pt'>avi, m4u, mov, mp4, movie, mpe, mpeg, mpg, mxu, qt, wmv</p>
+
+<p class=MsoBodyText align=left style='margin-left:10.5pt;text-align:left;
+text-indent:21.0pt'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-13.35pt'><span style='font-family:Wingdings'>Ø<span
+style='font:7.0pt "Times New Roman"'> </span></span>File filter</p>
+
+<p class=MsoBodyText align=left style='margin-left:63.75pt;text-align:left;
+text-indent:.05pt'>You can select the name and extension of the file you want
+to synchronize with other than the above.</p>
+
+<p class=MsoBodyText align=left style='margin-left:32.25pt;text-align:left;
+text-indent:31.45pt'><a href="#_2.5_File_selection">See 2.5 file filter</a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:49.35pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>File size filter</p>
+
+<p class=MsoListParagraph align=left style='margin-left:49.35pt;text-align:
+left'>You can select a file depending on the size of the file.</p>
+
+<p class=MsoBodyText align=left style='margin-left:7.4pt;text-align:left;
+text-indent:41.95pt'><a href="#_2.5_File_selection">See 2.5 file filter</a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:49.35pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>File last modified date filter</p>
+
+<p class=MsoListParagraph align=left style='margin-left:49.35pt;text-align:
+left'>You can select a file by its last modified date.</p>
+
+<p class=MsoBodyText align=left style='margin-left:7.4pt;text-align:left;
+text-indent:41.95pt'><a href="#_2.5_File_selection">See 2.5 file filter</a></p>
+
+<p class=MsoBodyText align=left style='margin-left:32.25pt;text-align:left;
+text-indent:31.45pt'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Select sub directories for sync</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>If
+you do not check and then sync all of the sub directory. If you check to show
+directory filter button.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:49.35pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Directory filter</p>
+
+<p class=MsoBodyText align=left style='margin-left:17.85pt;text-align:left;
+text-indent:31.45pt'>You can select the name of the directory you want to
+synchronize.</p>
+
+<p class=MsoBodyText align=left style='margin-left:7.35pt;text-align:left;
+text-indent:41.95pt'><a href="#_2.6_Directory_selection">See 2.6 directory
+filter</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync is started only when charging</p>
+
+<p class=MsoNormal style='margin-left:21.0pt'>If checked, you can start sync
+only while charging. If sync is started when not charging it will result in an
+error.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync files that’s exist directory under the directory specified
+by the master</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>It processes
+the files and directories that exist in the directory specified by the master
+profile when you check. (The checkbox is checked the default)</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>It
+handles only the presence directory to the directory specified in the master
+profile if you have not checked.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Confirm before override copy or delete</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>It
+will display a confirmation dialog when you want to overwrite and delete the
+file if you have checked.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Network</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Run even when off</p>
+
+<p class=MsoListParagraph>Sync will start even if wireless LAN is off.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Conn to any AP</p>
+
+<p class=MsoListParagraph>Sync can start if the wireless LAN is connected to
+the any access point.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Has private address</p>
+
+<p class=MsoListParagraph>&nbsp;</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>IP Address list</p>
+
+<p class=MsoListParagraph>&nbsp;</p>
+
+<p class=MsoListParagraph align=left style='margin-left:23.3pt;text-align:left;
+text-indent:-21.0pt'><span style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Skip task if WLAN IP does not
+match the specified IP address.</span></p>
+
+<p class=MsoNormal style='margin-left:23.65pt;text-indent:-2.3pt'>If it is not
+connected to a specific access point, start the next sync task without error</p>
+
+<p class=MsoListParagraph align=left style='margin-left:23.3pt;text-align:left;
+text-indent:-21.0pt'><span style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Allow sync with all IP addresses</span></p>
+
+<p class=MsoNormal style='margin-left:23.65pt;text-indent:-2.3pt'>Enable sync
+with global IP addresses.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync a subdirectory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Sync
+the subdirectory if you check.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync a empty directory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Sync
+the empty directory if you check.(Create a empty directory on the target)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync a hidden directory</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left;
+page-break-after:avoid'>Sync the hidden directory if you check.( The name of
+the hidden directory starts from &quot;.&quot; In Android, since it is
+represented by a bit in the directory and not the name of the directory on
+Samba and Windows, the directory that was created will not be in a hidden directory)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync a hidden file</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Sync
+the hidden file if you check.( The name of the hidden file begins with
+&quot;.&quot; In Android, since it is represented by a bit in the directory and
+not the name of the file with Samba and Windows, the file that is created will
+not be hidden files)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To overwrite the file</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Overwrite
+the file if same file exists.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Wireless LAN</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>&quot;Sync
+at the time of AP connection&quot; sync and are not connected to the access
+point will exit with an error. &quot;Access Point List&quot; can initiate
+synchronization when connected to a particular access point. Please enter the
+access point name by pressing the wireless LAN access point list button.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To retry if a network error occurs during sync</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Retry
+the sync only error on the remote side. Retry is done up to three times, is
+carried out after 30 seconds from the error occurred retry each.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If it is not connected to the specified access point, skip the
+task and start the next task.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left'>If it
+is not connected to a specific access point, start the next synchronization
+task without error</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Use expanded directory selection / exclusion filter</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>If
+checked, if the superior directory is excluded and if the sub-directory is
+selected, the sub-directories are subject to synchronization.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>When it is a mirror, delete first</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'><b><u><span
+style='color:red'><span style='text-decoration:none'>&nbsp;</span></span></u></b></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To not set the last update time of the target file the same as
+the master</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'><b><u><span
+style='color:red'>This option is not normally used</span></u></b></p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>If
+checked, the last update time of the file copied from the master will be the
+time the file was copied. The difference judgment is judged by the existence of
+the existence of the file and the file size.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Obtain the last modified date and time of the local file as
+SMBSync2</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'><b><u><span
+style='color:red'>This option is not normally used</span></u></b></p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>To
+maintain last modified time of local file by the proprietary SMBSync(Do not use
+Java File#setLastModified()).</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To limit the IO buffer at the time of remote file writing to 16KB</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'><b><u><span
+style='color:red'>Please try when the &quot;Access is denied&quot; error when
+writing to the PC/NAS folder has occurred.</span></u></b></p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>If
+you check to limit the IO buffer at the time of remote file writing to 16KB.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To use the file size to the difference judgment</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>If
+you check it is determined as the difference file if the file size is
+different.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>To use the last update time of the file to the difference
+judgment</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left;
+page-break-after:avoid'>If you check it is determined if the last update time
+of the file is different as the difference file.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Last time of tolerance(Sec)</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>It
+allows if it is within the specified time.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Never overwrite target file if it is newer than the master file</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>If
+checked, the file will be overwritten only when the master file is newer than
+the target file even if the file size and the last update time are different.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Skipping processing of directories or files that contain
+characters that can not be used as directory names or file names. (&quot;, :,
+\, *, &lt;, &gt;, |)</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>If checked, it will display a
+warning message without processing directories/files containing unusable
+characters and process the following directories/files.</p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Ignore files with a file size of 0 Bytes  </p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt'>If checked, files with a
+file size of 0 bytes will be ignored.  </p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a>  </p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=318pt><a name="_Toc62936236">2.1.1. Mater/Target folder (SMB)</a></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Folder type</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Specify
+folder type.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Search SMB server</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt;
+page-break-after:avoid'>To scan the network for find the remote server</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Server name/Address</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+specify remote server name or IP address</p>
+
+<p class=MsoNormal align=left style='margin-left:1.0cm;text-align:left;
+text-indent:-1.0cm'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SMB protocol</p>
+
+<p class=MsoNormal style='margin-left:21.3pt'>You can specify SMB protocol.</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>-Uses SMB V1</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>-Uses SMB V2(2.01)</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>-Uses SMB V2(2.11)</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>-Uses SMB V2/3(2.12)(Support SMB
+V2 or V3 protocol)</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>-Uses SMB V2/3(2.14)(Support SMB
+V2 or V3 protocol)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Use port number</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Specify
+if the port number of the standard is not available. The standard port number
+is 139/tcp and 445/tcp.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Use remote host userid and password</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>It
+specifies whether to use the user ID / password.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>User name</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+specify userid for host.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Password</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+specify password for host.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Logon</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Logon
+to specified remote host.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Show list(Share)</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Show
+share name for host. </p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>(Selectable
+share name will be displayed when you press the listing button, click the share
+name, and then press the OK)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Show list (Directory)</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Show
+directory list for SMB host. </p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>(Selectable
+directory will be displayed when you press the listing button, click the
+directory, and then press the OK)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Directory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+specify directory for SMB host.</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Target
+directory can be used keywords %YEAR%, %MONTH%, %DAY% and %DAY-OF-YEAR%. 
+Keywords are replaced by the year, month and date at the start of sync.</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%YEAR% the year (such as 2018 or 2019)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%MONTH% month (01 to 12)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY% day (01 to 31)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY-OF-YEAR% days since the beginning of the year (001 to 365,
+leap year 366)</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Example: (Example of February 9,
+2018)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%MONTH% -&gt; BACKUP-2018_02</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%DAY-OF-YEAR% -&gt; BACKUP-2018_009</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a></p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-family:"Arial","sans-serif"'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=318pt><a name="_Toc62936237">2.1.2.Master/Target folder(Internal
+Storage)</a></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Folder type</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Folder
+type is selected internal storage, SMB share, SDCARD, ZIP.</p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Internal storage</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:41.95pt'>Access
+to the mounted USB storage to internal storage and file system.</p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SMB share</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:41.95pt'>Using
+the SMB protocol to share files between a PC or NAS.</p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SDCARD</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:41.95pt'>To
+access the mounted SDCARD</p>
+
+<p class=MsoNormal align=left style='margin-left:21.3pt;text-align:left;
+text-indent:-21.3pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Mount point</p>
+
+<p class=MsoNormal style='margin-left:21.3pt'>When the folder type is internal
+storage, you can select the mount point that can be used. (USB connection such
+as /storage/usbdisk will be displayed if available)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>List Directory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Show
+directory list for internal storage or SDCARD. </p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>(Selectable
+directory will be displayed when you press the listing button, click the
+directory, and then press the OK)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Directory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+specify directory for internal storage or SDCARD.</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Target
+directory can be used keywords %YEAR%, %MONTH%, %DAY% and %DAY-OF-YEAR%. 
+Keywords are replaced by the year, month and date at the start of sync.</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%YEAR% the year (such as 2018 or 2019)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%MONTH% month (01 to 12)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY% day (01 to 31)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY-OF-YEAR% days since the beginning of the year (001 to 365,
+leap year 366)</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Example: (Example of February 9,
+2018)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%MONTH% -&gt; BACKUP-2018_02</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%DAY-OF-YEAR% -&gt; BACKUP-2018_009</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a></p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-family:"Arial","sans-serif"'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=318pt><a name="_Toc62936238">2.1.3.Master/Target folder(SDCARD)</a></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Folder type</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Folder
+type is selected internal storage, SMB share, SDCARD, ZIP.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>List Directory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt;
+page-break-after:avoid'>Show directory list for internal storage or SDCARD. </p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left;
+page-break-after:avoid'>(Selectable directory will be displayed when you press
+the listing button, click the directory, and then press the OK)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Directory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+specify directory for internal storage or SDCARD.</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Target
+directory can be used keywords %YEAR%, %MONTH%, %DAY% and %DAY-OF-YEAR%. 
+Keywords are replaced by the year, month and date at the start of sync.</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%YEAR% the year (such as 2018 or 2019)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%MONTH% month (01 to 12)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY% day (01 to 31)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY-OF-YEAR% days since the beginning of the year (001 to 365,
+leap year 366)</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Example: (Example of February 9,
+2018)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%MONTH% -&gt; BACKUP-2018_02</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%DAY-OF-YEAR% -&gt; BACKUP-2018_009</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Allow write to SDCARD</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Select
+the SDCARD root directory to get access to SDCARD. If you can not select it
+please send the system information to the developer with &quot;Menu -&gt; System
+Information&quot;.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-family:"Arial","sans-serif"'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=318pt><a name="_Toc62936239">2.1.4.Master/Target folder(USB Media)</a></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Folder type</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Folder
+type is selected internal storage, SMB share, SDCARD, ZIP.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Internal storage</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Access
+to the mounted USB storage to internal storage and file system.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SMB share</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Using
+the SMB protocol to share files between a PC or NAS.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SDCARD</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+access the mounted SDCARD</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Show list (Directory)</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt;
+page-break-after:avoid'>Show directory list for internal storage or SDCARD. </p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left;
+page-break-after:avoid'>(Selectable directory will be displayed when you press
+the listing button, click the directory, and then press the OK)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Directory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+specify directory for internal storage or SDCARD.</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Target
+directory can be used keywords %YEAR%, %MONTH%, %DAY% and %DAY-OF-YEAR%. 
+Keywords are replaced by the year, month and date at the start of sync.</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%YEAR% the year (such as 2018 or 2019)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%MONTH% month (01 to 12)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY% day (01 to 31)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY-OF-YEAR% days since the beginning of the year (001 to 365,
+leap year 366)</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Example: (Example of February 9,
+2018)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%MONTH% -&gt; BACKUP-2018_02</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%DAY-OF-YEAR% -&gt; BACKUP-2018_009</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Allow write to USB Media</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Select
+the USB Media root directory to get access to USB Media. If you can not select
+it please send the system information to the developer with &quot;Menu -&gt;
+System Information&quot;.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=318pt><a name="_Toc62936240">2.1.5.Archive option</a></p>
+
+<p class=318pt><img border=0 width=568 height=366 id="オブジェクト 1"
+src="SMBSync2_Desc_EN.files/image003.png"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If the date and time cannot be determined by EXIF data, display a
+confirmation message.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+page-break-after:avoid'>If checked, when the shooting date and time can not be
+acquired from Exif, a confirmation message is displayed to the user as to
+whether or not to use the last update time of the file. If you select Cancel as
+a confirmation message, the file will not be archived.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Archive file if :</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'>Select
+files with shooting date and time older than archive execution date / time.
+(Regardless of the shooting date and time, the shooting date is older than 7
+days, the shooting date is older than 30 days, the shooting date is more than
+60 days old, the shooting date is more than 90 days old, the shooting date is
+more than 180 days old, the shooting date is older than 180 days, It is older
+than 1 year. You can choose from the above items)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Change the name of the file before archiving it in the target
+folder.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'>Change
+it when archiving file name. The file name can be set with a template.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Template for rename file name</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'>You
+can create a file name pattern like DSC_%DATE%_%TIME% and change the file name
+when archiving. You can add keywords behind the cursor by tapping the button.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Increment file names by appeding</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'>You
+can add a sequence number to the file name.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Create a directory based on the shooting date to store the files.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>Create patterns such as%
+YEAR% and DIR-% YEAR% and save them in the directory at archive time. Replace
+the date and time with the shooting date and time.<br clear=all
+style='page-break-before:always'>
+</p>
+
+<p class=318pt><a name="_Toc62936241"></a><a name="_Toc454444220"></a><a
+name="_2.5_File_selection"></a>2.1.6.Master/Target folder(ZIP)</p>
+
+<p class=MsoNormal align=left style='margin-left:21.3pt;text-align:left;
+text-indent:-21.3pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Folder type</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Folder type is selected internal
+storage, SMB share, SDCARD, ZIP.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SDCARD</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Show Select SDCARD screen.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.3pt;text-align:left;
+text-indent:-21.3pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>List Files</p>
+
+<p class=MsoNormal align=left style='margin-left:21.3pt;text-align:left;
+page-break-after:avoid'>Show file lists.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.3pt;text-align:left;
+text-indent:-21.3pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>ZIP file name</p>
+
+<p class=MsoNormal align=left style='margin-left:21.3pt;text-align:left'>Specify
+ZIP file name.</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Target
+file name can be used keywords %YEAR%, %MONTH%, %DAY% and %DAY-OF-YEAR%. 
+Keywords are replaced by the year, month and date at the start of sync.</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%YEAR% the year (such as 2018 or 2019)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%MONTH% month (01 to 12)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY% day (01 to 31)</p>
+
+<p class=MsoListParagraph style='margin-left:57.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>%DAY-OF-YEAR% days since the beginning of the year (001 to 365,
+leap year 366)</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Example: (Example of February 9,
+2018)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%MONTH% -&gt; BACKUP-2018_02</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>BACKUP-%YEAR%_%DAY-OF-YEAR% -&gt; BACKUP-2018_009</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Compression level</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>Select compression level.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Fastest</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Fast</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Normal</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Maximum</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Ultra</p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Encryption method</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>None</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>ZipCrypto</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>AES128 Bit</p>
+
+<p class=MsoListParagraph align=left style='margin-left:62.95pt;text-align:
+left;text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>AES256 Bit</p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Password</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>Specify password for encryption.</p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Confirm</p>
+
+<p class=MsoNormal style='margin-left:1.0cm'>Re-enter password for
+confirmation.</p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc62936242">2.2.File
+filter</a></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc62936243">2.2.1.File name filter</a></h3>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>File selection filter
+is used to select the files you want to synchronize.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>You can choose the
+selection and exclusion. If you enter both the selection and exclusion is a
+priority excluded.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>If you enter two or
+more filters to select the file under the conditions OR.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Delete</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+delete the file filter</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Include/Exclude</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Specifies
+the exclusion filters or filter selection.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Add</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Added
+as a filter content input to the filter box.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Filter</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Please
+input such as DSC *.JPG. Please do not enter the directory selection filters
+with regular expressions.</p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc62936244"></a><a name="_Toc62895923">2.2.2.</a>File
+size filter</h3>
+
+<p class=MsoNormal>You can choose which files to sync depending on their size. 
+</p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Less than/Greater than</p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt'>You can specify any file
+size.</p>
+
+<h3 style='margin-top:18.0pt;page-break-after:auto'><a name="_Toc62936245"></a><a
+name="_Toc62895924">2.2.3.</a>File last modified date filter</h3>
+
+<p class=MsoNormal>You can select files whose last modification date is before
+or within xx days of the sync start date.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If you specify 0 days before, the last update date will be
+selected only for the start date of synchronization.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If you specify 1 day before selects files whose last modification
+date is between the start date and the day before the start date.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If you specify Older than 1 day selects files whose last
+modification date is before the day before the start of synchronization.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'>Example
+of specifying file filter</p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'><img
+border=0 width=511 height=352 id="オブジェクト 6"
+src="SMBSync2_Desc_EN.files/image004.png"></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'>Specify following two filters.</p>
+
+<p class=MsoList2 align=left style='margin-left:39.0pt;text-align:left;
+text-indent:-18.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>“FILE*.*” as inclusion</p>
+
+<p class=MsoList2 align=left style='margin-left:39.0pt;text-align:left;
+text-indent:-18.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>“FILE*.JPG” as exclusion</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0cm'>File to be processed will be FIIL-2.mpg
+FIILE01.TXT, and FIILE02.TXT.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><a
+name="_2.6_Directory_selection"></a><u><span style='font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc62936246">2.3.Directory
+selection filter</a></h2>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'>Directory
+selection filter is used to select the directories you want to synchronize.(You
+can choose the selection and exclusion. Exclusion takes precedence If you enter
+both the selection and exclusion filters.)</p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'>If
+you enter two or more filters to select the file under the conditions OR.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Delete</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
+delete the directory filter</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Include/Exclude</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Specifies
+the exclusion filters or filter selection.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Directory listing</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Show
+the directory list.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Add</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Added
+as a filter content input to the filter box.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Filter</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>A
+filter value. Please input such as DIR* or DIR-A. Please do not enter the file
+selection filters with regular expressions. </p>
+
+<p class=MsoBodyText align=left style='text-align:left'> </p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'>List
+of directory</p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'><img
+border=0 width=567 height=354 src="SMBSync2_Desc_EN.files/image005.jpg"></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Add a filter by
+checking the check box on the right, and press the Add button.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'> </p>
+
+<p class=MsoBodyText align=left style='text-align:left'><u>Example of
+specifying directory filter(#1)</u></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><img border=0
+width=502 height=306 src="SMBSync2_Desc_EN.files/image006.png"></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>The above is a
+representation of how files and directories are included to /DIR-A is specified
+DIR filter in the case of unchecked “Handling files and directories master
+directory” is to be selected.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>The results are
+processed DIR-AB, only DIR-AC is selected.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'> </p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'><u>Example
+of specifying directory filter(#2)</u></p>
+
+<p class=MsoBodyText align=left style='text-align:left;page-break-after:avoid'><img
+border=0 width=502 height=313 id="オブジェクト 8"
+src="SMBSync2_Desc_EN.files/image007.png"></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>The above is a
+representation of how the directories and files that are included to /DIR-A is
+specified DIR filter in the case of Checked “Handling files and directories
+master directory” is to be selected.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>The results are
+processed only file FILE-01.TXT DIR-AB, and DIR-AC is selected.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal><u>Example of specifying directory filter(#3)</u></p>
+
+<p class=MsoNormal>It is an example when &quot;Use expanded directory selection
+/ exclusion filter&quot; is checked.</p>
+
+<p class=MsoNormal>DIR-AB is excluded, but DIR-AB-B is subject to
+synchronization because the lower directory DIR-AB-B is selected.</p>
+
+<p class=MsoNormal><img border=0 width=502 height=253 id="オブジェクト 7"
+src="SMBSync2_Desc_EN.files/image008.png"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc62936247">3.Tab Description</a></h1>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc62936248"></a><a
+name="_Toc399593478">3.1</a>.Task tab</h2>
+
+<p class=MsoNormal align=left style='text-align:left'>This is a list of the task.
+You can do perform sync, edit , delete, add a task.</p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc62936249">3.1.1.Basic
+mode</a></h2>
+
+<p class=MsoNormal align=left style='text-align:left'>You can edit the task and
+tap the name of the task. It also can be operated by pressing the button at the
+bottom.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=567
+height=425 src="SMBSync2_Desc_EN.files/image009.jpg"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 src="SMBSync2_Desc_EN.files/image010.png"> Sync all
+auto sync task</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=16 height=16 src="SMBSync2_Desc_EN.files/image011.png"> Add sync
+task</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=19 height=19 id="図 20" src="SMBSync2_Desc_EN.files/image012.png"
+alt="*"> Select all task</p>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc62936250">3.1.2.Selection
+mode</a></h2>
+
+<p class=MsoNormal align=left style='text-align:left;page-break-after:avoid'>All
+or selected icon<img border=0 width=19 height=19
+src="SMBSync2_Desc_EN.files/image012.png"> and the screen switches to the
+selection mode by long click the profile name. Press the done<img border=0
+width=19 height=19 src="SMBSync2_Desc_EN.files/image013.png"> or return key to
+the basic display mode.</p>
+
+<p class=MsoNormal align=left style='text-align:left;page-break-after:avoid'><img
+border=0 width=567 height=425 id="図 21"
+src="SMBSync2_Desc_EN.files/image014.jpg"></p>
+
+<p class=MsoNormal align=left style='text-align:left'>You can switch the
+selection and non-selection when you tap the check box on the right. You can
+also switch If the user taps the profile name. </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=19 height=19 src="SMBSync2_Desc_EN.files/image015.png"> To
+active selected profile</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 src="SMBSync2_Desc_EN.files/image016.png"> To
+inactive selected profile</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=16 height=16 src="SMBSync2_Desc_EN.files/image017.png"> To copy
+selected profile(Disabled when multiple selected)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 src="SMBSync2_Desc_EN.files/image018.png"> To
+rename selected profile(Disabled when multiple selected)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 id="図 41" src="SMBSync2_Desc_EN.files/image019.png"
+alt="*"> To delete selected profile</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=16 height=16 id="図 209" src="SMBSync2_Desc_EN.files/image020.png"
+alt="ic_128_arrow_down"> Move to down</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=15 height=15 id="図 215" src="SMBSync2_Desc_EN.files/image021.png"> Move
+to up</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=19 height=19 src="SMBSync2_Desc_EN.files/image022.png" alt="*"> Select
+all profiles</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=15 height=15 id="図 17" src="SMBSync2_Desc_EN.files/image023.png"
+alt="*"> Unselect all items</p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'>&nbsp;</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'><a href="#_top">Return to Index</a> </p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>&nbsp;</p>
+
+<h2 style='margin-top:12.0pt'><a name="_Toc62936251"></a><a name="_Toc55482099">3.2.</a>Schedule
+tab</h2>
+
+<p class=MsoNormal style='page-break-after:avoid'>Schedule the synchronization.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img border=0 width=566
+height=354 src="SMBSync2_Desc_EN.files/image024.png"></p>
+
+<p class=MsoNormal>You can register multiple schedules. When you tap an
+individual schedule, you can edit the contents of the schedule.</p>
+
+<p class=MsoNormal>You can also tap and hold/select all to go to selection
+mode. To exit selection mode, tap the back key.</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=19 height=19 id="図 48" src="SMBSync2_Desc_EN.files/image025.png"> Add
+schedule</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=19 height=19 id="図 44" src="SMBSync2_Desc_EN.files/image015.png"
+alt="menu_active"> To enable selected schedule</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=18 height=18 id="図 38" src="SMBSync2_Desc_EN.files/image016.png"> To
+disable selected schedule</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=16 height=16 id="図 39" src="SMBSync2_Desc_EN.files/image017.png"> Copy
+the selected schedule (disabled for multiple selections)</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=18 height=18 id="図 40" src="SMBSync2_Desc_EN.files/image018.png"> Rename
+the selected schedule (disabled for multiple selections)</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=18 height=18 id="図 45" src="SMBSync2_Desc_EN.files/image019.png"
+alt="menu_trash"> Remove selected schdule</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=15 height=15 id="図 53" src="SMBSync2_Desc_EN.files/image026.png"> Execute
+the schedule immediately.</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=19 height=19 id="図 47" src="SMBSync2_Desc_EN.files/image022.png"
+alt="context_button_select_all"> Select all schedule</p>
+
+<p class=MsoListParagraph style='margin-left:2.3pt;text-indent:-2.3pt'><img
+border=0 width=16 height=16 src="SMBSync2_Desc_EN.files/image027.png"
+alt="context_button_unselect_all"> Unselect all schedule</p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc62936252">3.2.1.Editing the Schedule</a></h3>
+
+<p class=MsoNormal>When you tap the schedule name or detail part, you will move
+to the edit screen.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Enable schedule</p>
+
+<p class=MsoNormal style='margin-left:24.0pt;page-break-after:avoid'>Enable/disable
+the schedule</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Schedule type</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>The schedule can be specified as
+follows</p>
+
+<p class=MsoListParagraph align=left style='margin-left:45.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Every hour</p>
+
+<p class=MsoListParagraph align=left style='margin-left:45.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Every day</p>
+
+<p class=MsoListParagraph align=left style='margin-left:45.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Every month</p>
+
+<p class=MsoListParagraph align=left style='margin-left:45.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Day of week</p>
+
+<p class=MsoListParagraph align=left style='margin-left:45.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Interval</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Reset interval startup time to last sync time</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>The time of the interval schedule
+is recalculated from the time you press the Save button in the &quot;Edit
+schedule list&quot;.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>First sync will start within the next time</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>The first time on the interval
+schedule is the minute that the second is moved forward from the current time
+(if the time you clicked on the &quot;Edit Schedule&quot; button is 12:10:20,
+then it is 12:11:00). (If the time you clicked the &quot;Save&quot; button in
+&quot;Edit Schedule List&quot; is 12:10:20, then the time is 12:11:00.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Execute all auto sync tasks</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>Unchecked allows you to select a
+synchronization task</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync list...</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>Press the button to display the
+edit screen.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sync only starts whlle charging</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left'>You
+can change the options for the synchronization task.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If Wi-Fi off, enable it to start the scheduled task(Not available
+on Android 10 or later.)</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>If Wi-Fi is off when you start
+syncing, turn on Wi-Fi.</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>After Wi-Fi is turned on, delay sync by:</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>Waiting time to start syncing
+after turning on Wi-Fi</p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Turn off back the WiFi once the scheduled tasks are completed</p>
+
+<p class=MsoNormal style='margin-left:24.0pt'>If Wi-Fi is on at the end of the
+synchronization, turn off Wi-Fi</p>
+
+<h3 style='margin-top:18.0pt;page-break-after:auto'><a name="_Toc62936253"></a><a
+name="_Toc55482101">3.2.2.</a>Sync task list</h3>
+
+<p class=MsoNormal>Select the synchronization task to be performed.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'><a href="#_top">Return to Index</a></p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><a name="_Toc399593480"><span
+style='font-family:"Arial","sans-serif"'>&nbsp;</span></a></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc62936254">3.3</a>.History
+tab</h2>
+
+<p class=MsoNormal align=left style='text-align:left'>Show sync result history.</p>
+
+<h3 align=left style='margin-top:18.0pt;text-align:left'><a name="_Toc62936255">3.3.1.Basic
+mode</a></h3>
+
+<p class=MsoNormal align=left style='text-align:left'>Log is displayed when the
+log file is saved when you tap the history if logging is enabled.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=567
+height=354 id="図 22" src="SMBSync2_Desc_EN.files/image028.jpg"></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><img
+border=0 width=16 height=16 src="SMBSync2_Desc_EN.files/image029.png"> Move to
+top</p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><img
+border=0 width=16 height=16 src="SMBSync2_Desc_EN.files/image030.png"> Move to
+bottom</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=19 height=19 src="SMBSync2_Desc_EN.files/image031.png" alt="*"> Select
+all items</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h3 align=left style='margin-top:18.0pt;text-align:left'><a name="_Toc62936256">3.3.2.Selection
+mode</a></h3>
+
+<p class=MsoNormal align=left style='text-align:left'>All or selected icon and
+the screen switches to the selection mode by pressing and holding the history.
+Press the key to return to the basic display mode.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=567
+height=354 id="図 25" src="SMBSync2_Desc_EN.files/image032.jpg"></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><img
+border=0 width=16 height=16 id="図 55" src="SMBSync2_Desc_EN.files/image029.png"> Move
+to top</p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><img
+border=0 width=16 height=16 id="図 56" src="SMBSync2_Desc_EN.files/image030.png"> Move
+to bottom</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 src="SMBSync2_Desc_EN.files/image019.png"> Delete
+selected history</p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><img
+border=0 width=19 height=19 id="図 58" src="SMBSync2_Desc_EN.files/image033.png"> Copy
+selected history to clipboard</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=19 height=19 src="SMBSync2_Desc_EN.files/image031.png" alt="*"> Select
+all items</p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><img
+border=0 width=15 height=15 src="SMBSync2_Desc_EN.files/image023.png" alt="*"> Unselect
+all items</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>&nbsp;</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'><a href="#_top">Return to Index</a> </p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936257">3.4.Message
+tab</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><img border=0
+width=567 height=425 id="図 29" src="SMBSync2_Desc_EN.files/image034.jpg"></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Display synchronization
+results and error message.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 id="図 15" src="SMBSync2_Desc_EN.files/image035.png"> Disable
+auto scroll(Tap to enable auto scroll)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 id="図 16" src="SMBSync2_Desc_EN.files/image036.png"> Enable
+auto scroll(Tap to disable auto scaroll)</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 src="SMBSync2_Desc_EN.files/image037.png"> Move to
+to</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=18 height=18 id="図 18" src="SMBSync2_Desc_EN.files/image038.png"> Move
+to bottom</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><img
+border=0 width=13 height=13 id="図 42" src="SMBSync2_Desc_EN.files/image039.png"> Clear
+message</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>&nbsp;</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'><a href="#_top">Return to Index</a> </p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'>&nbsp;</p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc62936258">4.Description of the Menu</a></h1>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936259">4.1.Sync</a></p>
+
+<p class=MsoNormal align=left style='text-align:left'>To start auto sync task.</p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936260">4.2.Show
+log</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Log file display
+application selection screen is displayed when you select, select the
+application, please view.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936261">4.3.Export
+task</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Writes sync task to the
+file.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936262">4.4.Import
+task</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Load the sync task from
+the file.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936263">4.5.Manage
+log file</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Delete or send a log
+file..</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936264">4.6.Maintaince
+Admin files</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Remove the management
+data of SMBSync2 that are no longer needed.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936265">4.7.Settings</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Configure the following
+items.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Synchronization</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>User interface</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Log</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SMB settings</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Security</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Miscellaneous</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a name="_Toc375487399"><u><span
+style='font-family:"Arial","sans-serif"'><span style='text-decoration:none'>&nbsp;</span></span></u></a></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc62936266">4.7.1</a>.Synchronization</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Error process option</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>Ignore errors that occur during
+synchronization.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Wi-Fi lock</p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>If
+checked, acquire Wi-Fi lock during synchronization.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'>&nbsp;</p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc62936267"></a><a
+name="_Toc375487400">4.7.2</a>.User interface</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Application specific directory use</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>If enabled, Suppress “Application specific
+directory use” warning message.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Notification</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Playback
+default notification sound when sync ended</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Vibration</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Vibrate
+your device when sync ended</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Screen theme</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Use
+light theme.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc62936268"></a><a
+name="_Toc375487401">4.7.3</a>.Log</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Message logging option</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>Decide how to save log messages to a file.</p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>No</p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>It with the date (log-yyyy_mm_dd.txt) in the file name, (create
+the file if it does not exist) </p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Log file generation</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Log</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>Determine the type of messages written to the
+log message.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Log message directory</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>Determine the message log file directory.
+(Default is /mnt/sdcard/SMBSync)</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0cm'>&nbsp;</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0cm'>&nbsp;</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0cm'>&nbsp;</p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc62936269"></a><a
+name="_Toc375487404">4.7.4.SMB</a> Settings</p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Restore default value</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Restore default value</p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>lmCompatibility(SMBv1)</p>
+
+<p class=MsoNormal style='text-indent:21.3pt'>JCIFS LM Compatibility(Initial
+value:3)</p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Client response timeout</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>30000 milli sec </p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Disable plain text passwords(SMBv1)</p>
+
+<p class=MsoNormal style='text-indent:21.0pt'>Do not encrypt password(Not
+checked)</p>
+
+<p class=MsoNormal align=left style='margin-left:35.4pt;text-align:left;
+text-indent:-35.4pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>useExtendedSecurity(SMBv1)</p>
+
+<p class=MsoNormal style='margin-left:21.3pt'>Use extended security(Checkked)</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'>&nbsp;</p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc62936270">4.7.5.Security</a></h3>
+
+<p class=MsoNormal align=left style='margin-left:24.0pt;text-align:left;
+text-indent:-24.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Security</p>
+
+<p class=MsoNormal style='margin-left:21.0pt'>Tap to display the detailed
+setting screen. If you are creating an application password, the password
+authentication screen will be displayed and you will not be able to proceed
+unless the correct password is entered.</p>
+
+<h3 style='margin-top:18.0pt;page-break-after:auto'><a name="_Toc62936271">4.7.5.1.Security
+settings</a></h3>
+
+<p class=MsoNormal align=left style='margin-left:24.0pt;text-align:left;
+text-indent:-24.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Application Password</p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-41.7pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>CREATE PASSWORD</p>
+
+<p class=MsoNormal style='margin-left:21.3pt;text-indent:21.0pt'>Create
+application password</p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-41.7pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>REMOVE PASSWORD</p>
+
+<p class=MsoNormal style='margin-left:21.3pt;text-indent:21.0pt'>Remove
+application password</p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-41.7pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>CHANGE PASSWORD</p>
+
+<p class=MsoNormal style='margin-left:21.3pt;text-indent:21.0pt'><span
+class=tlid-translation>Change application password</span></p>
+
+<p class=MsoNormal align=left style='margin-left:24.0pt;text-align:left;
+text-indent:-24.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Items to protect</p>
+
+<p class=MsoNormal style='margin-left:-2.65pt;text-indent:21.0pt'>Not enabled
+unless an application password is created</p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-41.7pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Set the validity time of password authentication to 30 minutes</p>
+
+<p class=MsoNormal style='margin-left:42.0pt'>If you do not check it,
+re-authentication will not be performed until the application is terminated.
+However, when displaying the security detail setting screen, always re-authenticate.</p>
+
+<p class=MsoNormal align=left style='margin-left:42.55pt;text-align:left;
+text-indent:-21.25pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Perform application password authentication when “Launch
+application”</p>
+
+<p class=MsoNormal style='margin-left:42.0pt'>The application can not be
+started until the correct password is entered. However, the sync task runs
+without a password.</p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-41.7pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Perform application password authentication when “Edit task”</p>
+
+<p class=MsoNormal style='margin-left:21.3pt;text-indent:21.0pt'>You can not
+edit until the correct password is entered.</p>
+
+<p class=MsoNormal align=left style='margin-left:42.55pt;text-align:left;
+text-indent:-21.25pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Perform application password authentication when “Export task
+list”</p>
+
+<p class=MsoNormal style='text-indent:42.0pt'>You can not “Export task list”
+until the correct password is entered.</p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-41.7pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Hide the saved account name and password when editing the SMB
+folder</p>
+
+<p class=MsoNormal style='margin-left:42.0pt'>When checked, the saved account
+name and password will be blank, so please enter your account name and password
+again.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0cm;text-align:
+left;text-indent:0cm'>&nbsp;</p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc62936272"></a><a
+name="_Toc375487405">4.7.6</a>.Miscellaneous</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Exit cleanly</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:0cm'>Check to kill the process at the end of the app.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Text processing of sync messages</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:0cm'>Check to make the Android standard word wrap.</p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:0cm'>&nbsp;</p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc62936273">4.8.Kill
+the application</a></h2>
+
+<p class=MsoNormal align=left style='text-align:left'>Kill the SMBSync2.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936274">4.9.About
+SMBSync2</a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>Load the profile from
+the file.</p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-family:"Arial","sans-serif"'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936275">4.10.Edit
+USB UUID List</a></p>
+
+<p class=MsoNormal>Edit the list to force USB media to be recognized as USB by
+specifying its UUID when it is recognized as SDCARD.</p>
+
+<p class=MsoNormal>However, the USB media must be recognized as
+ExternalFilesDirs. (You can check this in Menu-&gt;System Info)</p>
+
+<p class=MsoNormal>In the example below, the UUID is 087A-771C is the USB
+media.</p>
+
+<p class=MsoNormal><span style='position:absolute;z-index:1;left:0px;
+margin-left:2px;margin-top:44px;width:386px;height:64px'><img width=386
+height=64 src="SMBSync2_Desc_EN.files/image040.png"></span><img border=0
+width=495 height=310 id="図 11" src="SMBSync2_Desc_EN.files/image041.jpg"
+alt="Screenshot_20201222_084027_com.sentaroh.android.SMBSync2"></p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<h2 style='margin-top:12.0pt'><a name="_Toc62936276"></a><a name="_Toc59527012">4.11.About
+SMBSync2</a></h2>
+
+<p class=MsoNormal>View feature overview, privacy policy and change history.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936277">4.12.System
+Information</a></p>
+
+<p class=MsoNormal>Show system information and send to developer.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
+to Index</a> </p>
+
+<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc62936278"></a><a name="_Starting_from_other"></a>5.Starting from
+other applications</h1>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936279">5.1.Starting
+from other applications</a></p>
+
+<p class=MsoNormal style='margin-left:21.35pt;word-break:break-all'>You can
+initiate synchronization by issuing an intent with
+“com.sentaroh.android.SMBSync2.ACTION_START_SYNC” from application to action.</p>
+
+<p class=MsoNormal style='margin-left:21.35pt;word-break:break-all'>Intent Extra
+allows you to specify the tasks to synchronize.</p>
+
+<p class=MsoNormal style='margin-left:21.35pt;word-break:break-all'>Synchronizes
+the autosync task when Extra is not specified.</p>
+
+<p class=MsoNormal style='text-indent:21.35pt'><u>Code Example 1 (start
+synchronous tasks test1 and test2)</u></p>
+
+<p class=MsoNormal style='margin-left:31.4pt;text-indent:-2.2pt'><span
+style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Intent in=new
+Intent(&quot;com.sentaroh.android.SMBSync2.ACTION_START_SYNC&quot;);</span></p>
+
+<p class=MsoNormal style='margin-left:31.4pt;text-indent:-2.2pt'><span
+style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>String prof= &quot;test1,test2&quot;;</span></p>
+
+<p class=MsoNormal style='margin-left:31.4pt;text-indent:-2.2pt'><span
+style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>in.putExtra(&quot;SyncProfile&quot;,
+prof);</span></p>
+
+<p class=MsoNormal style='margin-left:31.4pt;text-indent:-2.2pt'><span
+style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>startActivity(in);</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='text-indent:21.35pt'><u>Code Example 2 (Start all
+auto-sync tasks)</u></p>
+
+<p class=MsoNormal style='margin-left:31.4pt;text-indent:-2.2pt'><span
+style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Intent in=new
+Intent(&quot;com.sentaroh.android.SMBSync2.ACTION_START_SYNC&quot;);</span></p>
+
+<p class=MsoNormal style='margin-left:31.4pt;text-indent:-2.2pt'><span
+style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>startActivity(in);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a href="#_top">Return to
+Index</a></p>
+
+<span style='font-size:10.5pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<h3 align=left style='margin-top:18.0pt;text-align:left'><a name="_Toc62936280">5.1.1.Example
+for Tasker</a></h3>
+
+<h3 align=left style='margin-top:18.0pt;text-align:left'><img border=0
+width=434 height=689 id="図 10" src="SMBSync2_Desc_EN.files/image042.jpg"></h3>
+
+<p class=MsoNormal align=left style='text-align:left'>Action:com.sentaroh.android.SMBSync2.ACTION_START_STNC</p>
+
+<p class=MsoNormal align=left style='text-align:left'>Extra: SyncProfile:”prof1,
+prof2”</p>
+
+<p class=MsoNormal align=left style='text-align:left'>Target:   Activity</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'>Sample task is here</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a
+href="https://drive.google.com/file/d/1AV1pIXlaR9yXlam3TTXBR85m-g22SXSr/view?usp=sharing">https://drive.google.com/file/d/1AV1pIXlaR9yXlam3TTXBR85m-g22SXSr/view?usp=sharing</a></p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a href="#_top">Return to
+Index</a></p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=20mm8261 style='margin-top:18.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:24.45pt;margin-bottom:.0001pt;text-indent:-24.45pt'><a
+name="_Toc62936281"></a><a name="_Toc535901673">5.2</a>.Notification of
+synchronization start and end</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Issues a broadcast intent at the start and end of
+synchronization.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Start      :com.sentaroh.android.SMBSync2.ACTION_SYNC_STARTED</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+page-break-after:avoid'>End       :com.sentaroh.android.SMBSync2.ACTION_SYNC_ENDED</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If you want the app to detect the timing of synchronization start
+and end, please receive the intent on the broadcast receiver.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>The exit status string is stored in ExtraData of Intent. The key
+is SYNC_RESULT.</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SUCCESS</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>ERROR</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>CANCEL</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>WARNING</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Sample</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Tasker</p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;page-break-after:avoid'>https://drive.google.com/file/d/1JIRbLKX-2PyfmfePMPNinx9p3jAr2933/view?usp=sharing</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt;page-break-after:avoid'><span style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Automagic</p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;page-break-after:avoid'>https://drive.google.com/file/d/1HfPaMg75tuJU7jkYXBi5j0gvxNTBORwG/view?usp=sharing</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a href="#_top">Return to
+Index</a></p>
+
+<u><span style='font-size:10.5pt;font-family:"Arial","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span></u>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc62936282">5.3.Sample
+code for start SMBSync2 by Application</a></p>
+
+<p class=MsoNormal align=left style='text-align:left'>The following code sample
+to start SMBSync2 from Activity.</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.0pt'>public class MainActivity extends Activity {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.0pt'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.0pt'>protected void onCreate(Bundle savedInstanceState) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>super.onCreate(savedInstanceState);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>setContentView(R.layout.activity_main);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>Intent in=new
+Intent(&quot;com.sentaroh.android.SMBSync2.ACTION_START_SYNC&quot;);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>String prof=
+&quot;S-PGMS,S-Pictures,INTERNAL-TO-SDCARD&quot;;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>in.putExtra(&quot;SyncProfile&quot;, prof);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>sendBroadcast(in,null);//Android 5/6/7</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.0pt'>}</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'>OR</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.0pt'>public class MainActivity extends Activity {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.0pt'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.0pt'>protected void onCreate(Bundle savedInstanceState) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>super.onCreate(savedInstanceState);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>setContentView(R.layout.activity_main);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>Intent in=new Intent(&quot;com.sentaroh.android.SMBSync2.ACTION_START_SYNC&quot;);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>String prof=
+&quot;S-PGMS,S-Pictures,INTERNAL-TO-SDCARD&quot;;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>in.putExtra(&quot;SyncProfile&quot;, prof);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+style='font-size:10.0pt'>startActivity(in);//Android 5/6/7/8</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.0pt'>}</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc62936283">7.Library</a></h1>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="https://github.com/AgNO3/jcifs-ng">jcifs-ng</a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="https://jcifs.samba.org/">jcifs-1.3.17</a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on/1.58">Bouncy
+Castle Provider</a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="http://www.lingala.net/zip4j/">Zip4j 1.3.2</a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="https://code.google.com/archive/p/juniversalchardet/">juniversalchardet-1.0.3</a></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="https://github.com/drewnoakes/metadata-extractor">Metadata-extractor</a></p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a href="#_top">Return to
+Index</a> </p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc62936284"></a><a name="_Toc8406463">8.About collecting and sending
+data in the app</a></h1>
+
+<p class=MsoListBullet style='margin-left:0cm;text-indent:0cm'>The app collects
+the following data and saves it in a file to verify the synchronization result
+and to identify the cause of the error.</p>
+
+<p class=MsoListBullet style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Directory name, file name, file size and last modified date of
+file</p>
+
+<p class=MsoListBullet style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Network interface name, IP address</p>
+
+<p class=MsoListBullet style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>User settings other than password</p>
+
+<p class=MsoListBullet style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Error information in the app</p>
+
+<p class=MsoListBullet style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>In addition to the above when using SMB, the account name,
+account password and host name (if used)</p>
+
+<p class=MsoListBullet style='margin-left:0cm;text-indent:0cm'>Information that
+is collected is not sent outside in the app. However, except when sending by
+user operation. (Log management, Share a history and send a system information)</p>
+
+<p class=MsoNormal align=left style='text-align:left'>See “<a
+href="https://blog.goo.ne.jp/fhoshino/e/7085a8251e1a89325487eb03d450f432">Privacy
+Policy</a>”.</p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc62936285">9.Acknowledgments</a></h1>
+
+<p class=MsoNormal align=left style='text-align:left'>Thank you for translating
+it into English for volunteers.</p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a href="#_top">Return to
+Index</a> </p>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

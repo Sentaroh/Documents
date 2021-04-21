@@ -1,0 +1,850 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>SMBSync Description</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+h1
+	{mso-style-link:"見出し 1 \(文字\)";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	word-break:break-all;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h2
+	{mso-style-link:"見出し 2 \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h3
+	{mso-style-link:"見出し 3 \(文字\)";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.0pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+h5
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h6
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"見出しマップ \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"MS UI Gothic";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"吹き出し \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	color:#365F91;
+	font-weight:bold;}
+p.148mm, li.148mm, div.148mm
+	{mso-style-name:"スタイル 左 \:  14\.8 mm";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.2Century, li.2Century, div.2Century
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-before:always;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Century","serif";
+	text-decoration:underline;}
+span.2
+	{mso-style-name:"見出し 2 \(文字\)";
+	mso-style-link:"見出し 2";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.2Century0
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.a
+	{mso-style-name:"吹き出し \(文字\)";
+	mso-style-link:吹き出し;
+	font-family:"Arial","sans-serif";}
+span.a0
+	{mso-style-name:"見出しマップ \(文字\)";
+	mso-style-link:見出しマップ;
+	font-family:"MS UI Gothic";}
+span.1
+	{mso-style-name:"見出し 1 \(文字\)";
+	mso-style-link:"見出し 1";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.3
+	{mso-style-name:"見出し 3 \(文字\)";
+	mso-style-link:"見出し 3";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:42.55pt 3.0cm 42.55pt 3.0cm;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.0pt'>
+
+<p class=MsoTocHeading><a name="_Toc450110949"></a><span lang=JA>Table of
+contents</span></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc50028149">1.Sync<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028150">1.1. Can
+not bi-directionally sync?<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028151">1.2. How to
+sync specific files such as PDF and Excel<span style='color:windowtext;
+display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028152">1.3. The
+last update time of the sync file is rewritten<span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028153">1.4. The
+file copied on PC on SDCARD will be overwritten<span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028154">1.5. Unable
+to start sync during sleep<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028155">1.6. Unable
+to start sync android8.1 or higher<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc50028156">2.Archive<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028157">2.1.How to
+store photos and videos in the shooting year/month folder<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028158">2.2. How to
+add the shooting date and time to the file name of photos and videos<span
+style='color:windowtext;display:none;text-decoration:none'>  </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc50028159">3.
+Cooperation with external applications<span style='color:windowtext;display:
+none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028160">3.1. How do
+I synchronize from an external application?<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc4><a href="#_Toc50028161">3.1.1.Tasker example<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc50028162">4.SDCARD/USB<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028163">4.1. How to
+allow access to SDCARD/USB media<span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028164">4.2.
+Applications do not recognize SDCARD or USB media<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc50028165">5. Network
+related<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028166">5.1. Unable
+to connect to SMB server with hostname<span style='color:windowtext;display:
+none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc50028167">6. System
+setting related<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028168">6.1. I do
+not want to enable the location.<span style='color:windowtext;display:none;
+text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc2 style='margin-left:12.0pt'><a href="#_Toc50028169">7.Misc<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc3 style='margin-left:24.0pt'><a href="#_Toc50028170">7.1. Task
+List backup and restore<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc450110990"></a><a name="_Toc50028149">1.Sync</a></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028150">1.1. Can not bi-directionally
+sync?</a></h3>
+
+<p class=MsoNormal>Bidirectional sync is not implemented because it is
+difficult to judge conflicting files (files updated on both sides, which file
+is new or unknown). In the future I am planning to implement it.</p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028151">1.2. How to sync specific
+files such as PDF and Excel</a></h3>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>After selecting the
+&quot;Select file&quot; of the synchronization task, tap the file filter and
+add the filter. Please describe the filter like * .pdf or * .xlsx.</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Edit sync task screen</p>
+
+<p class=MsoNormal><img width=385 height=240 id="オブジェクト 5"
+src="SMBSync3_FAQ_EN.files/image003.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Edit file filter</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img width=385 height=240
+src="SMBSync3_FAQ_EN.files/image004.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-before:always'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Save file filter</p>
+
+<p class=MsoNormal><img width=385 height=240 id="オブジェクト 8"
+src="SMBSync3_FAQ_EN.files/image005.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Finished</p>
+
+<p class=MsoNormal><img width=384 height=240
+src="SMBSync3_FAQ_EN.files/image006.png"></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028152">1.3. The last update time
+of the sync file is rewritten</a></h3>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>On most models, the last
+update time of the file will be the same as the synchronization source, but on
+some models, it will be rewritten to the synchronized time due to system
+limitations.</span></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028153">1.4. The file copied on PC
+on SDCARD will be overwritten</a></h3>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>For
+models that can not change the last update time of the file, the file list is
+saved in the management file and the last update time is maintained. Therefore,
+if the file does not exist in the management file, it is treated as a
+difference file and it is overwritten. Since the management file matches the
+real file in the second and subsequent times, overwriting is not performed.</span></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028154">1.5. Unable to start sync
+during sleep</a></h3>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>If
+your device is sleeping and you can't start syncing from a schedule or an
+external app, try the following methods.</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Do not optimize the battery (App menu-&gt; display battery
+optimization).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'><img
+width=170 height=312 src="SMBSync3_FAQ_EN.files/image007.jpg"> <img width=169
+height=310 id="図 6" src="SMBSync3_FAQ_EN.files/image008.jpg"> <img width=169
+height=310 src="SMBSync3_FAQ_EN.files/image009.jpg"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Allow the app to start automatically when the device restarts
+(System settings on some models-&gt; battery).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Allow background start (System settings on some models-&gt;
+battery).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Give your app permission to turn on WiFi (some models require you
+to allow WiFi privileges).</p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-size:
+10.5pt'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync3_FAQ_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Enable Wi-Fi locking and enable “Prevent delay of start sync
+during sleep” (App Settings Sync tab).</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'><img
+width=233 height=415 id="図 2" src="SMBSync3_FAQ_EN.files/image010.png"></p>
+
+<h3 style='margin-top:18.0pt;page-break-before:always'><a name="_Toc50028155">1.6.
+Unable to start sync android8.1 or higher</a></h3>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>If
+you have specified the &quot;connected to AP&quot; or &quot;Access point
+list&quot; in the sync option, it is now mandatory to enable location services
+from Android 8.1. Enable Location service on Android 9 (System Settings-&gt; Security)</span></p>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>If
+you do not want to enable the location, see “</span><a
+href="#_5.1.ロケーションを有効にしたくない"><span style='font-size:10.5pt'>I do not want to
+enable the location</span></a><span style='font-size:10.5pt'>”.</span></p>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='page-break-after:avoid'><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc50028156">2.Archive</a></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028157">2.1.How to store photos
+and videos in the shooting year/month folder</a></h3>
+
+<p class=MsoNormal>Tap on the target folder in the archiving task to see the
+options.</p>
+
+<p class=MsoNormal>The figure below saves a photo in /Arch/YYYY/ on SDCARD.
+YYYY is the directory of the year the photo was taken and will be created if it
+does not exist when the archive is run.</p>
+
+<p class=MsoNormal><img border=0 width=568 height=247 id="オブジェクト 6"
+src="SMBSync3_FAQ_EN.files/image011.png"></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028158">2.2. How to add the
+shooting date and time to the file name of photos and videos</a></h3>
+
+<p class=MsoNormal>To change the file name, tap &quot;Edit file name parameter&quot;
+and change it. The figure below is an example of setting the file name to
+DSC_YYYY-MM-DD. YYYY-MM-DD is converted to shooting date.</p>
+
+<p class=MsoNormal><img border=0 width=568 height=247 id="オブジェクト 7"
+src="SMBSync3_FAQ_EN.files/image012.png"></p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc50028159">3. Cooperation with external
+applications</a></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028160">3.1. How do I synchronize
+from an external application?</a></h3>
+
+<h4><a name="_Toc50028161">3.1.1.Tasker example</a> </h4>
+
+<p class=MsoNormal style='page-break-after:avoid'><img border=0 width=262
+height=418 id="図 8" src="SMBSync3_FAQ_EN.files/image013.png"><img border=0
+width=261 height=418 src="SMBSync3_FAQ_EN.files/image014.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Action
+: com.sentaroh.android.SMBSync3.ACTION_START_SYNC</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Extra
+: SyncProfile:prof1, prof2</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Target
+: Activity</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>See the link below for sample tasks.</p>
+
+<p class=MsoNormal align=left style='text-align:left'><a
+href="https://drive.google.com/file/d/102YpRq_BsaB39npTAFds5l8D01-3OxXZ/view?usp=sharing">https://drive.google.com/file/d/102YpRq_BsaB39npTAFds5l8D01-3OxXZ/view?usp=sharing</a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc50028162">4.SDCARD/USB</a></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028163">4.1. How to allow access
+to SDCARD/USB media</a></h3>
+
+<p class=MsoNormal style='page-break-after:avoid'>You can grant permissions
+from the Master/Target folder or menu. Press the &quot;Allow use external
+storage&quot; button.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>1.Screen example of
+Android8/8.1/9.0</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img border=0 width=568
+height=248 id="オブジェクト 2" src="SMBSync3_FAQ_EN.files/image015.png">2.Screen
+example of Android 10</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img border=0 width=568
+height=197 id="オブジェクト 3" src="SMBSync3_FAQ_EN.files/image016.png"></p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>&nbsp;</p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028164">4.2. Applications do not
+recognize SDCARD or USB media</a></h3>
+
+<p class=MsoNormal style='page-break-after:avoid'>Make sure the media in the
+system settings storage is not corrupt.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img border=0 width=173
+height=359 id="オブジェクト 14" src="SMBSync3_FAQ_EN.files/image017.png"></p>
+
+<p class=MsoNormal style='page-break-after:avoid'>On Android, media that is
+later recognized as having a duplicate media UUID cannot be used. To use it,
+format one of the media on Android.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'>The figure below is an
+example where UUID is duplicated between 0000-0000 for MicroSD and USB OTG.</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img border=0 width=173
+height=359 id="オブジェクト 15" src="SMBSync3_FAQ_EN.files/image018.png"></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><a name="_Toc326958"><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></a></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc50028165">5.</a> Network related</h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028166"></a><a name="_Toc326959">5.1.</a>
+Unable to connect to SMB server with hostname</h3>
+
+<p class=MsoNormal>If the host name is specified on the SMB server, and the
+virtual network is enabled in a virtual machine environment such as VirtualBox,
+the host name will fail to address resolution.</p>
+
+<p class=MsoNormal>It can be solved by one of the following methods.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Start virtual machine</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Disable virtual network adapter</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If any of the above methods can not be used, use an IP address
+instead of a host name</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:12.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><a name="_Toc326960"><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></a></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc50028167">6.</a> System setting
+related</h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028168"></a><a name="_Toc326961"></a><a
+name="_5.1.ロケーションを有効にしたくない"></a><a name="_6.1._I_do"></a>6.1. I do not want to enable
+the location.</h3>
+
+<p class=MsoNormal>To start the synchronization on a specific network without
+enabling location in more than Android8.1, change your wireless LAN to &quot;Has
+private address&quot; or &quot;IP address List&quot;.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Has private address</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>You can initiate
+synchronization if the IP address assigned to WiFi is 10.0.0.0 - 10.255.255.255
+or 172.16.0.0 - 172.31.255.255 or 192.168.0.0 - 192.168.255.255.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>IP address list</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>You can start syncing when
+the WiFi IP address matches one of the specified addresses.</p>
+
+<p class=MsoNormal><img border=0 width=401 height=250 id="図 3"
+src="SMBSync3_FAQ_EN.files/image019.png"><br clear=all style='page-break-before:
+always'>
+</p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc50028169"></a><a name="_Toc326962">7.</a>Misc</h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc50028170"></a><a name="_Toc326963">7.1.</a>
+Task List backup and restore</h3>
+
+<p class=MsoNormal><span style='font-size:10.5pt'>You can save the task list to
+internal storage/SDCARD/USB media. You can also restore the saved task list.</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Save task list</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>In the App menu, tap
+Export Task List to specify the destination. When you tap the mount point, the
+available storage list will be displayed, so please select it.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'><span style='position:
+absolute;z-index:1;left:0px;margin-left:50px;margin-top:67px;width:151px;
+height:65px'><img width=151 height=65 src="SMBSync3_FAQ_EN.files/image020.png"
+alt="四角形吹き出し: Tap here"></span><span style='position:absolute;z-index:2;
+left:0px;margin-left:282px;margin-top:105px;width:152px;height:65px'><img
+width=152 height=65 src="SMBSync3_FAQ_EN.files/image021.png"
+alt="四角形吹き出し: Please select"></span><img border=0 width=217 height=389 id="図 9"
+src="SMBSync3_FAQ_EN.files/image022.jpg"><img border=0 width=216 height=388
+id="図 12" src="SMBSync3_FAQ_EN.files/image023.jpg"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync3_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Restore task list</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>In the App menu, tap Import
+Task List to specify the destination.</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

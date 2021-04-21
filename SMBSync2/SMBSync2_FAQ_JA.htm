@@ -1,0 +1,1071 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>SMBSync Description</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+h1
+	{mso-style-link:"見出し 1 \(文字\)";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	word-break:break-all;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h2
+	{mso-style-link:"見出し 2 \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h3
+	{mso-style-link:"見出し 3 \(文字\)";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.0pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+h5
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h6
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:9.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"見出しマップ \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"MS UI Gothic";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"吹き出し \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	color:#365F91;
+	font-weight:bold;}
+p.148mm, li.148mm, div.148mm
+	{mso-style-name:"スタイル 左 \:  14\.8 mm";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Century","serif";}
+p.2Century, li.2Century, div.2Century
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Century","serif";
+	text-decoration:underline;}
+span.2
+	{mso-style-name:"見出し 2 \(文字\)";
+	mso-style-link:"見出し 2";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.2Century0
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.a
+	{mso-style-name:"吹き出し \(文字\)";
+	mso-style-link:吹き出し;
+	font-family:"Arial","sans-serif";}
+span.a0
+	{mso-style-name:"見出しマップ \(文字\)";
+	mso-style-link:見出しマップ;
+	font-family:"MS UI Gothic";}
+span.1
+	{mso-style-name:"見出し 1 \(文字\)";
+	mso-style-link:"見出し 1";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.3
+	{mso-style-name:"見出し 3 \(文字\)";
+	mso-style-link:"見出し 3";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:42.55pt 3.0cm 42.55pt 3.0cm;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.0pt'>
+
+<p class=MsoTocHeading><a name="_Toc450110949"></a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>目次</span></p>
+
+<p class=MsoToc1><a href="#_Toc66210731">1.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>同期</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210732">1.1.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>双方向の同期はできないのですか</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210733">1.2.PDF<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>や</span>Excel<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>などのファイルだけを同期する方法</span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210734">1.3.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>同期したファイルの最終更新時刻が書き換わります</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210735">1.4.PC<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>で</span>SDCARD<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>にコピーしたファイルが上書きされます</span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210736">1.5.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>スリープ中に「同期を開始できない」または「エラー」となる</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210737">1.6.Android10<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>で</span>WiFi<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>をオン・オフできない</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210738">1.7.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>特定の場所（自宅など）でのみ同期を開始したい</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc66210739">2.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>アーカイブ</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210740">2.1.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>写真やビデオの撮影年月のフォルダーに格納する方法</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>8</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc66210741">3.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>外部アプリとの連携</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210742">3.1.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>外部アプリからの同期実行はどうするの</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc66210743">3.1.1.Tasker<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>での指定例</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc66210744">4.SDCARD/USB<span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210745">4.1.SDCARD/USB<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>メディアのアクセス許可の方法</span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210746">4.2.SDCARD<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>または</span>USB<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>メディアがアプリに認識されない</span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210747">4.3.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>メディアを強制的に</span>USB<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>として認識させる</span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc66210748">5.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>ネットワーク関連</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210749">5.1.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>ホスト名で</span>SMB<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>サーバーに接続できない</span><span
+style='color:windowtext;display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210750">5.2.IP<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>アドレスリストのフィルター使用方法</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc66210751">6.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>その他</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210752">6.1.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>タスクリストのバックアップ</span><span style='color:windowtext;display:
+none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc66210753">6.1.1.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>自動保存</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc66210754">6.1.2.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>手動保存</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc66210755">6.2.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>タスクリストの復元</span><span style='color:windowtext;display:none;
+text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc66210756">6.2.1.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>自動保存されたファイルからの復元</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>15</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc66210757">6.2.2.<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>手動で保存したファイルからの復元</span><span style='color:windowtext;
+display:none;text-decoration:none'>... </span><span
+style='color:windowtext;display:none;text-decoration:none'>16</span></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:9.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><a name="_Toc450110990"><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></a></p>
+
+<h1 style='margin-top:18.0pt'><a name="_Toc66210731">1.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>同期</span></h1>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210732">1.1.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>双方向の同期はできないのですか</span></h2>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>双方向同期は競合ファイル（双方でファイルを更新した結果、どちらのファイルが新しいのか不明なファイル）の判定が難しいため実装していません。</span></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210733">1.2.PDF</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>や</span>Excel<span lang=JA style='font-family:
+"ＭＳ ゴシック"'>などのファイルだけを同期する方法</span></h2>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>同期タスクの「ファイルを選択する」有効にした後ファイルフィルターをタップしてフィルターを追加してください。フィルターは</span>*.pdf<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>や</span>*.xlsx<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>のように記述してください。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Symbol'><img width=9 height=9
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-size:9.0pt;font-family:"ＭＳ 明朝","serif"'>同期タスクを編集します。</span></p>
+
+<p class=MsoNormal><img width=338 height=210 id="オブジェクト 1"
+src="SMBSync2_FAQ_JA.files/image003.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Symbol'><img width=9 height=9
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-size:9.0pt;font-family:"ＭＳ 明朝","serif"'>ファイルフィルターを編集します。３と４を繰り返すことにより複数のフィルターを登録できます。</span></p>
+
+<p class=MsoNormal><img width=338 height=211
+src="SMBSync2_FAQ_JA.files/image004.png"></p>
+
+<span style='font-size:9.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'>&nbsp;</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Symbol'><img width=9 height=9
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-size:9.0pt;font-family:"ＭＳ 明朝","serif"'>ファイルフィルターを保存します。</span></p>
+
+<p class=MsoNormal><img width=339 height=211
+src="SMBSync2_FAQ_JA.files/image005.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Symbol'><img width=9 height=9
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-size:9.0pt;font-family:"ＭＳ 明朝","serif"'>ファイルフィルターの登録が完了しました。</span></p>
+
+<p class=MsoNormal><img width=338 height=211 id="図 10"
+src="SMBSync2_FAQ_JA.files/image006.png"></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210734">1.3.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>同期したファイルの最終更新時刻が書き換わります</span></h2>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>内部ストレージ</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'><span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>大部分の機種ではファイルの最終更新時刻が同期元と同じになりますが、一部機種ではシステムの制限により同期した時間に書き換わります。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SDCARD<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>および</span>USB<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>メディア</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'>Android5/6<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>では常に同期した時刻に書き換えられます、</span><span lang=JA> </span>Android7<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>以上では多くの機種では時刻は書き換わりませんが、一部機種ではシステムの制限により同期した時間に書き換わります。</span></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210735">1.4.PC</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>で</span>SDCARD<span lang=JA style='font-family:
+"ＭＳ ゴシック"'>にコピーしたファイルが上書きされます</span></h2>
+
+<p class=MsoNormal><span lang=JA style='font-size:10.5pt;font-family:"ＭＳ 明朝","serif"'>ファイルの最終更新時刻を変更できない機種では管理ファイルにファイル一覧を保存し最終更新時刻を維持しています。このため、</span><span
+style='font-size:10.5pt'>PC</span><span lang=JA style='font-size:10.5pt;
+font-family:"ＭＳ 明朝","serif"'>でコピーしたファイルは管理ファイルに登録されないため差分ファイルとみなして上書きします。</span></p>
+
+<p class=MsoNormal><span lang=JA style='font-size:10.5pt;font-family:"ＭＳ 明朝","serif"'>２回目以降では管理ファイルと実ファイルが一致しますので上書きは行われません。ただし、</span><span
+style='font-size:10.5pt'>SMBSync2</span><span lang=JA style='font-size:10.5pt;
+font-family:"ＭＳ 明朝","serif"'>以外のアプリでファイルを更新すると管理ファイルとの差が生じるために、同期を行うと上書きされます。</span></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210736">1.5.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>スリープ中に「同期を開始できない」または「エラー」となる</span></h2>
+
+<p class=MsoNormal><span lang=JA style='font-size:10.5pt;font-family:"ＭＳ 明朝","serif"'>端末がスリープ中にスケジュール機能または外部アプリからの同期が開始できない又はエラーとなる場合は下記の方法をお試しください</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>バッテリーの最適化を行わない</span>(<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>アプリメニュー</span>-&gt;<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>バッテリー最適化の表示</span>)</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;page-break-after:avoid'><img
+width=170 height=312 src="SMBSync2_FAQ_JA.files/image007.jpg"> <img width=169
+height=310 src="SMBSync2_FAQ_JA.files/image008.jpg"> <img width=169 height=310
+src="SMBSync2_FAQ_JA.files/image009.jpg"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アプリの自動起動を許可する</span>(<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>一部機種でシステムの設定</span>-&gt;<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>バッテリー</span>)</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>バックグラウンドでの起動を許可する</span>(<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>一部機種でシステムの設定</span>-&gt;<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>バッテリー</span>)</p>
+
+<p class=MsoNormal><img width=525 height=416
+src="SMBSync2_FAQ_JA.files/image010.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アプリから</span>WiFi<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>をオンにする許可を与える</span>(<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>一部の機種では</span>WiFi<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>の権限を許可する事が必要です</span>)</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt;
+page-break-after:avoid'><span style='font-family:Symbol'><img width=11
+height=11 src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アプリ設定の同期で</span>Wi-Fi<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>ロックと同期開始遅延防止を有効にする</span>(<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>アプリ設定の同期タブ</span>)</p>
+
+<p class=MsoNormal style='page-break-after:avoid'><img width=163 height=298
+id="図 12" src="SMBSync2_FAQ_JA.files/image011.jpg"></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210737"></a><a
+name="_1.6.ロケーションを有効にしたくない"></a>1.6.Android10<span lang=JA style='font-family:
+"ＭＳ ゴシック"'>で</span>WiFi<span lang=JA style='font-family:"ＭＳ ゴシック"'>をオン・オフできない</span></h2>
+
+<p class=MsoNormal align=left style='text-align:left'>Android10<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>の一部機種ではアプリから</span>WiFi<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>をオン・オフできない場合があります。</span>WiFi<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>をオンにする運用をご検討ください。</span></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210738">1.7.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>特定の場所（自宅など）でのみ同期を開始したい</span></h2>
+
+<p class=MsoNormal align=left style='text-align:left'>GooglePlay<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>プライバシーポリシー準拠のためにロケーション権限を使用しないことにしたために</span>WiFi<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>の</span>SSID(<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>アクセスポイント名</span>)<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>が読み取れなくなったためアクセスポイント名は使用できません。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>以下のいずれかの方法で特定の</span>WiFi<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>に接続したときに同期を開始する事ができます。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>WiFi<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>ルーターの</span>IP<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>アドレスを</span>192.168.0.0/24<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>以外にして、</span>IP<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>アドレスリストに登録する。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left'><img
+width=217 height=397 src="SMBSync2_FAQ_JA.files/image012.jpg"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt;page-break-after:avoid'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Android<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>側で</span>IP<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>アドレスを固定にして、</span>IP<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>アドレスリストに登録する。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>システム設定</span>-&gt;<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>ネットワークとインターネット</span>-&gt;WiFi-&gt;<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>貴方の</span>SSID<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>を選択</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>画面上部の編集</span>ICON<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>をタップ</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'>IP<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>設定を静的に変更し</span>IP<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>アドレスに</span>”192.168.0.100”<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>を入力する</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'><img width=217 height=397
+src="SMBSync2_FAQ_JA.files/image013.jpg"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>同期タスクを編集して</span>WiFi<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>オプションで</span>IP<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>アドレスリストを選択して、</span>IP<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>アドレスリストに登録する。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+page-break-after:avoid'><img width=217 height=397
+src="SMBSync2_FAQ_JA.files/image014.jpg"></p>
+
+<h1 style='margin-top:18.0pt'><a name="_Toc66210739">2.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>アーカイブ</span></h1>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210740">2.1.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>写真やビデオの撮影年月のフォルダーに格納する方法</span></h2>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アーカイブのタスクでターゲットフォルダーをタップし、オプションを表示してください。次のオプションを有効にしてください。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アーカイブする際にファイル名の変更および格納するディレクトリーを作成する</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アーカイブするときに撮影日に基づくディレクトリーを作成しファイルを格納する</span></p>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>下図は</span>SDCARD<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>上の</span>/Arch/YYYY/<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>に写真を保存します。</span>YYYY<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>は写真の撮影年のディレクトリーで、アーカイブ実行時に存在しない場合は作成します。</span></p>
+
+<p class=MsoNormal><img width=400 height=640
+src="SMBSync2_FAQ_JA.files/image015.png"></p>
+
+<span style='font-size:9.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><u><span style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h1 style='margin-top:18.0pt'><a name="_Toc66210741">3.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>外部アプリとの連携</span></h1>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210742">3.1.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>外部アプリからの同期実行はどうするの</span></h2>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>詳細は下記リンクの</span>PDF<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>「</span>5.<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>他のアプリケーションとの連携」を参照ください。</span></p>
+
+<p class=MsoNormal><a
+href="https://drive.google.com/file/d/0B77t0XpnNT7OSzBzcV9SemEwbkE/view?usp=sharing"><span
+style='font-size:10.5pt'>https://drive.google.com/file/d/0B77t0XpnNT7OSzBzcV9SemEwbkE/view?usp=sharing</span></a></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc66210743"></a><a name="_Toc535218278">3.1.1</a>.Tasker<span
+lang=JA style='font-family:"ＭＳ ゴシック"'>での指定例</span></h3>
+
+<p class=MsoNormal><img border=0 width=378 height=601 id="図 18"
+src="SMBSync2_FAQ_JA.files/image016.jpg"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Action : com.sentaroh.android.SMBSync2.ACTION_START_SYNC</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Extra : SyncProfile:prof1, prof2</p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Target : Activity</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>サンプルタスクは下記のリンク先を参照。</span></p>
+
+<p class=MsoNormal><a
+href="https://drive.google.com/file/d/1AV1pIXlaR9yXlam3TTXBR85m-g22SXSr/view?usp=sharing">https://drive.google.com/file/d/1AV1pIXlaR9yXlam3TTXBR85m-g22SXSr/view?usp=sharing</a><br
+clear=all style='page-break-before:always'>
+</p>
+
+<h1 style='margin-top:18.0pt'><a name="_Toc66210744">4.SDCARD/USB</a></h1>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210745">4.1.SDCARD/USB</a><span
+lang=JA style='font-family:"ＭＳ ゴシック"'>メディアのアクセス許可の方法</span></h2>
+
+<p class=MsoNormal>Master/Target<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>フォルダーまたはメニューからアクセス許可を与えることができます。</span></p>
+
+<p class=MsoNormal><img border=0 width=148 height=262 id="オブジェクト 2"
+src="SMBSync2_FAQ_JA.files/image017.png"></p>
+
+<p class=MsoNormal>Android6<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>までは下記の画面が表示されます。なお、下図はＳＤＣＡＲＤの例です、ＵＳＢの場合はＳＤカードをＵＳＢに読み替えてください。</span></p>
+
+<p class=MsoNormal><img border=0 width=566 height=251
+src="SMBSync2_FAQ_JA.files/image018.png"></p>
+
+<p class=MsoNormal><span style='position:absolute;z-index:2;left:0px;
+margin-left:-209px;margin-top:13px;width:36px;height:42px'><img width=36
+height=42 src="SMBSync2_FAQ_JA.files/image019.png"></span><span
+style='position:absolute;z-index:1;left:0px;margin-left:-325px;margin-top:21px;
+width:109px;height:42px'><img width=109 height=42
+src="SMBSync2_FAQ_JA.files/image020.png"></span>Android7/8/9/10<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>では下記の画面が表示されますので、許可してください。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=123
+height=229 src="SMBSync2_FAQ_JA.files/image021.png"><br clear=all
+style='page-break-before:always'>
+</p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210746">4.2.SDCARD</a><span
+lang=JA style='font-family:"ＭＳ ゴシック"'>または</span>USB<span lang=JA
+style='font-family:"ＭＳ ゴシック"'>メディアがアプリに認識されない</span></h2>
+
+<p class=MsoNormal>SMBSync2<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>では</span>SDCARD<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>または</span>USB<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>メディアは</span>/storage/xxxx-xxxx<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>にマウントされている必要があります。</span>(xxxx-xxxx<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>は</span>UUID<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>で英数字の組み合わせ</span>)</p>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>マウントされているかはシステム情報で確認できます。</span>USB<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>の場合は</span>USB<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>ドライブを接続後にシステム情報を確認してください。</span></p>
+
+<p class=MsoNormal><span style='position:absolute;z-index:4;left:0px;
+margin-left:8px;margin-top:75px;width:200px;height:41px'><img width=200
+height=41 src="SMBSync2_FAQ_JA.files/image022.png"></span><img border=0
+width=384 height=239 id="図 4" src="SMBSync2_FAQ_JA.files/image023.png"></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SDCARD</p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Wingdings'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=JA style='font-size:9.0pt;font-family:"ＭＳ 明朝","serif"'>マウントポイントにマウントされていること</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Wingdings'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:9.0pt'>Storage Manager</span><span
+lang=JA style='font-size:9.0pt;font-family:"ＭＳ 明朝","serif"'>で</span><span
+style='font-size:9.0pt'>SDCARD</span><span lang=JA style='font-size:9.0pt;
+font-family:"ＭＳ 明朝","serif"'>として認識されていること</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>USB<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>メディア</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Wingdings'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=JA style='font-size:9.0pt;font-family:"ＭＳ 明朝","serif"'>マウントポイントにマウントされていること</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Wingdings'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span style='font-size:9.0pt'>Storage Manager</span><span
+lang=JA style='font-size:9.0pt;font-family:"ＭＳ 明朝","serif"'>で</span><span
+style='font-size:9.0pt'>USB</span><span lang=JA style='font-size:9.0pt;
+font-family:"ＭＳ 明朝","serif"'>として認識されていること</span></p>
+
+<p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
+style='font-size:9.0pt;font-family:Wingdings'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span>SMBSync2<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>の設計上の理由から</span>USB-OTG<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>にカードリーダーなどを接続して複数のメディアを接続した場合は使用できません、メディアは</span>1<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>つのみにしてください。</span></p>
+
+<p class=MsoNormal><span style='position:absolute;z-index:3;left:0px;
+margin-left:2px;margin-top:129px;width:277px;height:48px'><img width=277
+height=48 src="SMBSync2_FAQ_JA.files/image024.png"></span><img border=0
+width=384 height=239 src="SMBSync2_FAQ_JA.files/image025.png"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:9.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210747">4.3.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>メディアを強制的に</span>USB<span lang=JA
+style='font-family:"ＭＳ ゴシック"'>として認識させる</span></h2>
+
+<p class=MsoNormal align=left style='text-align:left'>USB-OTG<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>に接続されている</span>USB<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>メディアが</span>USB<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>として認識されない場合は強制的に認識させるには下記手順で設定してください。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span lang=JA
+style='font-family:"ＭＳ 明朝","serif";color:red'>ここで登録した</span><span
+style='color:red'>UUID</span></u><u><span lang=JA style='font-family:"ＭＳ 明朝","serif";
+color:red'>は</span><span style='color:red'>SDCARD</span></u><u><span lang=JA
+style='font-family:"ＭＳ 明朝","serif";color:red'>として使用できません。</span></u></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>メニューから</span>”USB UUID<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>リストの編集</span>”<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>を選択</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=373
+height=172 id="オブジェクト 3" src="SMBSync2_FAQ_JA.files/image026.png"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>“UUID<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>の追加</span>”<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>をタップ</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=372
+height=172 id="図 21" src="SMBSync2_FAQ_JA.files/image027.png"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>USB<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>メディアの</span>UUID<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>をタップして選択して</span>(<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>下図の例では</span>”FFEF-11E7”<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>を選択</span>) ”<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>追加</span>”<span lang=JA style='font-family:
+"ＭＳ 明朝","serif"'>をタップする</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=372
+height=172 src="SMBSync2_FAQ_JA.files/image028.png"></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>”Save<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>”をタップして保存する</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=372
+height=172 id="図 7" src="SMBSync2_FAQ_JA.files/image029.png"></p>
+
+<h1 style='margin-top:18.0pt'><a name="_Toc66210748">5.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>ネットワーク関連</span></h1>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210749">5.1.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>ホスト名で</span>SMB<span lang=JA style='font-family:
+"ＭＳ ゴシック"'>サーバーに接続できない</span><span lang=JA> </span></h2>
+
+<p class=MsoNormal>SMB<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>サーバーにホスト名を指定している場合で、</span>VirtualBox<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>などの仮想マシン環境で仮想ネットワークを有効にしているとホスト名でアドレス解決ができずエラーとなる。</span></p>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>下記の何れかの方法で解決できます。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>仮想マシンを起動する</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>仮想ネットワークアダプターを無効にする</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>上記ができない場合はホスト名ではなく</span>IP<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>アドレスを使用する</span></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210750">5.2.IP</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>アドレスリストのフィルター使用方法</span></h2>
+
+<p class=MsoNormal align=left style='text-align:left'>IP<span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>アドレスリストではフィルターでワイルドカードが使用できます。</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>フィルターの例：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'>“192.168.*”                :
+192.168.0.0 – 192.168.255.255<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>が許可</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'>”192.168.*.*”             :
+192.168.0.0 – 192.168.255.255<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>が許可</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'>”192.168.100.*”        :
+192.168.100.0 – 192.168.100.255<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>が許可</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><img border=0 width=217
+height=397 id="図 3" src="SMBSync2_FAQ_JA.files/image030.jpg"></p>
+
+<h1 style='margin-top:18.0pt'><a name="_Toc66210751">6.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>その他</span></h1>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210752">6.1.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>タスクリストのバックアップ</span></h2>
+
+<p class=MsoNormal><span lang=JA style='font-size:10.5pt;font-family:"ＭＳ 明朝","serif"'>タスクリストを内部ストレージ・</span><span
+style='font-size:10.5pt'>SDCARD</span><span lang=JA style='font-size:10.5pt;
+font-family:"ＭＳ 明朝","serif"'>・</span><span style='font-size:10.5pt'>USB</span><span
+lang=JA style='font-size:10.5pt;font-family:"ＭＳ 明朝","serif"'>メディアに保存できます。また、保存したタスクリストを復元することもできます。</span></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc66210753">6.1.1.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>自動保存</span></h3>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>下記の何れかの操作が行われた時に同期タスクリストを自動保存します。</span></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>同期タスクの編集で保存</span></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>同期タスクリストの削除・改名</span></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>スケジュールの変更</span></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>スケジュールの有効・無効の切り替え</span></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>同期タスクリストの復元</span></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc66210754">6.1.2.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>手動保存</span></h3>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アプリメニューの「タスクリストの書き出し」をタップして書き出し先を指定してください。マウントポイントをタップすると使用可能なストレージ一覧が表示されますので、選択してください。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'><span style='position:
+absolute;z-index:6;left:0px;margin-left:219px;margin-top:83px;width:151px;
+height:65px'><img width=151 height=65 src="SMBSync2_FAQ_JA.files/image031.png"
+alt="四角形吹き出し: 選択してください"></span><span style='position:absolute;z-index:5;
+left:0px;margin-left:38px;margin-top:52px;width:152px;height:65px'><img
+width=152 height=65 src="SMBSync2_FAQ_JA.files/image032.png"
+alt="四角形吹き出し: タップしてください"></span><img border=0 width=173 height=311
+src="SMBSync2_FAQ_JA.files/image033.jpg"><img border=0 width=173 height=310
+src="SMBSync2_FAQ_JA.files/image034.jpg"></p>
+
+<span style='font-size:9.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 style='margin-top:18.0pt'><a name="_Toc66210755">6.2.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>タスクリストの復元</span></h2>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc66210756">6.2.1.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>自動保存されたファイルからの復元</span></h3>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アプリメニューの「タスクリストの読み込み」から選択画面を表示して、復元するファイルを選択してください。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'><img border=0 width=222
+height=400 id="図 6" src="SMBSync2_FAQ_JA.files/image035.jpg"></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=JA
+style='font-family:"ＭＳ 明朝","serif"'>アプリの初期化や再インストールを行った場合は、初期化以前の自動保存されたファイルでは下記の項目が復元できないために</span>&lt;decrypt
+failed&gt;<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>の文字列を割り当てます</span>(*1)<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'><span style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>SMB<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>サーバーのアカウント名とパスワード</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-18.0pt'><span style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync2_FAQ_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span>ZIP<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>フォルダーのパスワード</span></p>
+
+<p class=MsoNormal>(*1) <span lang=JA style='font-family:"ＭＳ 明朝","serif"'>自動保存されたファイルに</span>SMB<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>サーバーのアカウント名とパスワードおよび</span>ZIP<span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>フォルダーのパスワードが含まれている場合は</span>Android
+Keystore<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>に保存された暗号キーで暗号化します。</span><span
+lang=JA> </span><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>この暗号キーはアプリの初期化や再インストールで再作成されるため初期化以前の暗号キーを使用することができないため復号できなくなります。</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<span style='font-size:9.0pt;font-family:"Century","serif"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span
+style='font-size:12.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h3 style='margin-top:18.0pt'><a name="_Toc66210757">6.2.2.</a><span lang=JA
+style='font-family:"ＭＳ ゴシック"'>手動で保存したファイルからの復元</span></h3>
+
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>アプリメニューの「タスクリストの読み込み」から画面を表示して、「他のファイルを選択」をタップして読み込み先を指定してください。自動保存されたファイルが無いときは読み込みファイルの選択画面が直接表示されます。</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt'><img border=0 width=222
+height=400 id="図 9" src="SMBSync2_FAQ_JA.files/image036.jpg"><img border=0
+width=222 height=400 id="図 14" src="SMBSync2_FAQ_JA.files/image037.jpg"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>
