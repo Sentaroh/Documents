@@ -10,9 +10,9 @@
 - [よくある質問](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_FAQ_JA.htm)
 
 ### Privacy policy
-- [Privacy](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Privacy_EN.html)
-- [Confidentialité](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Privacy_FR.html)
-- [Privacy](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Privacy_IT.html)
-- [Приватность](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Privacy_RU.html)
-- [隐私](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Privacy_ZH.html)
-- [プライバシー](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Privacy_JA.html)
+- [Privacy](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_about_EN_Privacy.html)
+- [Confidentialité](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_about_FR_Privacy.html)
+- [Privacy](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_about_IT_Privacy.html)
+- [Приватность](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_about_RU_Privacy.html)
+- [隐私](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_about_ZH_Privacy.html)
+- [プライバシー](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_about_JA_Privacy.html)
