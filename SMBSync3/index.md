@@ -6,7 +6,6 @@
 
 ### FAQ
 - [Frequently Asked Questions](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_FAQ_EN.htm)
-- [questions fréquemment posées](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_FAQ_FR.htm)
 - [よくある質問](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_FAQ_JA.htm)
 
 ### Privacy policy
