@@ -1,6 +1,6 @@
 ## SMBSync3
 
-### Description
+### Manuals
 - [Feature Description](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Desc_EN.htm)
 - [機能の説明](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Desc_JA.htm)
 

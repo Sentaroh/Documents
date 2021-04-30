@@ -1,6 +1,6 @@
 ## ZipUtility3
 
-### Description
+### Manuals
 
 - [Feature Description](https://sentaroh.github.io/Documents/ZipUtility3/ZipUtility3_Desc_EN_Short.htm)
 - [Description de la fonction](https://sentaroh.github.io/Documents/ZipUtility3/ZipUtility3_Desc_FR_Short.htm)
