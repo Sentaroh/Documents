@@ -2,76 +2,85 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>SMBSync3_about_DE_Privacy</title></head>
-<body><h2>1.Aufgezeichnete Daten von der App senden</h2>
-<p>Die von der App aufgezeichneten Daten können mit den folgenden App-Vorgängen über E-Mail und Sharing-Tools extern versendet werden. <span style="color: red;"><u>Die App sendet die aufgezeichneten Daten nur dann extern, wenn der Benutzer dies tut.</u></span></p>
+<title>SMBSync3_about_DE_Privacy</title>
+</head>
+<body><h2 id='1erfasste-daten'>1.Erfasste Daten</h2>
+<h3 id='11vom-benutzer-an-smbsync3-bereitgestellte-daten'>1.1.Vom Benutzer an SMBSync3 bereitgestellte Daten</h3>
+<p>Die vom Benutzer für die Verwendung von SMBSync3 bereitgestellten Daten werden im Speicherbereich in der Anwendung gespeichert.
+Der SMB-Kontoname, das SMB-Kontopasswort, das ZIP-Passwort und das App-Passwort werden jedoch verschlüsselt gespeichert.
+<span style="color: red;"><u>Daten werden nicht extern gesendet, es sei denn, der Vorgang &quot;1.4.das Senden oder Schreiben von Daten außerhalb von SMBSync3&quot; wird ausgeführt.</u></span></p>
 <ul>
-<li>Drücken Sie die Schaltfläche &quot;Teilen&quot; auf der Registerkarte &quot;Verlauf&quot;.</li>
-<li>Drücken Sie die Schaltfläche &quot;An Entwickler senden&quot; aus den Systeminformationen</li>
-<li>Drücken Sie die &quot;Teilen-Schaltfläche&quot; oder die &quot;An Entwickler senden&quot;-Schaltfläche aus der Protokollverwaltung</li>
+<li>Dateiinformationen (Verzeichnisname, Dateiname)</li>
+<li>SMB-Serverinformationen (Hostname/IP-Adresse, Portnummer, Kontoname, Kontopasswort)</li>
+<li>Informationen zur ZIP-Datei (Komprimierungsmethode, Verschlüsselungsmethode, Verschlüsselungskennwort)</li>
+<li>App-Einstellungsoptionen (Warnmeldungen, Sprache und Schriftgröße usw.)</li>
+<li>Anwendungskennwort (Kennwort zur Authentifizierung beim Starten der Anwendung, Authentifizierung beim Ändern von Sicherheitseinstellungen usw.)</li>
 
 </ul>
-<h2>2.Von der App aufgezeichnete Daten</h2>
-<h3>2.1.Aufgabenliste der Synchronisation</h3>
-<p>Die App zeichnet die notwendigen Daten auf, um die Synchronisation durchzuführen.</p>
+<h3 id='12ausführungsergebnis-von-smbsync3'>1.2.Ausführungsergebnis von SMBSync3</h3>
+<p>Speichern Sie die Daten im Speicherbereich in der Anwendung, damit der Benutzer das Ausführungsergebnis von SMBSync3 überprüfen kann.
+<span style="color: red;"><u>Daten werden nicht extern gesendet, es sei denn, der Vorgang &quot;1.4.das Senden oder Schreiben von Daten außerhalb von SMBSync3&quot; wird ausgeführt.</u></span></p>
 <ul>
-<li>Verzeichnisname, Dateiname, SMB-Server-Hostname, IP-Adresse, Portnummer, Kontoname (<strong>*1</strong>), Passwort (<strong>*1</strong>)</li>
-<li>App-Passwort (<strong>*1</strong>) zum Schutz des App-Starts und der Einstellungsänderung</li>
-<li>App-Einstellungswert</li>
+<li>Verzeichnisname, Dateiname, Ausführungsstatus</li>
+<li>Dateigröße der synchronisierten Dateien, Datum und Uhrzeit der Dateiaktualisierung</li>
+<li>Fehlerinformation</li>
 
 </ul>
-<p><strong>*1</strong> Verschlüsselt mit systemgeneriertem Schlüssel, der im AndroidKeystore gespeichert ist.</p>
-<p> </p>
-<h3>2.2.App-Aktivitätsaufzeichnung</h3>
-<p>Die App zeichnet die folgenden Daten auf, wenn Sie die Protokollierung aktivieren, um die Synchronisierungsergebnisse zu überprüfen und Fehler zu beheben.</p>
+<h3 id='13aktivitätsprotokoll-von-smbsync3'>1.3.Aktivitätsprotokoll von SMBSync3</h3>
+<p>Speichern Sie die Daten in den Speicherbereich der Anwendung, um das Ausführungsergebnis von SMBSync3 zu überprüfen und den Entwickler zu befragen.
+<span style="color: red;"><u>Daten werden nicht extern gesendet, es sei denn, der Vorgang &quot;1.4.das Senden oder Schreiben von Daten außerhalb von SMBSync3&quot; wird ausgeführt.</u></span></p>
 <ul>
-<li>Android-Version, Terminalhersteller, Terminalname, Terminalmodell, Anwendungsversion</li>
-<li>Verzeichnisname, Dateiname, Dateigröße, Zeit der letzten Änderung der Datei</li>
-<li>SMB-Server-Hostname, IP-Adresse, Port-Nummer, Kontoname</li>
-<li>Name der Netzwerkschnittstelle, IP-Adresse</li>
-<li>Systemeinstellungswert (WiFi Sleep policy, Storage info)</li>
-<li>App-Einstellungswert</li>
+<li>Geräteinformationen (Herstellername, Modellname, OS-Version, Mount-Point, App-spezifisches Verzeichnis, StorageAccessFramework, Speichermanager, IP-Adresse, WiFi enable/disable, WiFi link speed)</li>
+<li>SMBSync3-Version, SMBSync3-Ausführungsoptionen</li>
+<li>Verzeichnisname, Dateiname, Ausführungsstatus</li>
+<li>Dateigröße der synchronisierten Dateien, Datum und Uhrzeit der Dateiaktualisierung</li>
+<li>Informationen zur Fehlersuche</li>
+<li>Fehlerinformation</li>
 
 </ul>
-<h3>2.3.Sync-Aufgabenliste exportieren</h3>
-<p>Die App kann die &quot;2.1 Synchronisationsaufgabenliste&quot; in eine Datei exportieren. Sie können den Export mit einem Passwort schützen.</p>
+<h3 id='14das-senden-oder-schreiben-von-daten-außerhalb-von-smbsync3'>1.4.das Senden oder Schreiben von Daten außerhalb von SMBSync3</h3>
+<p>SMBSync3-Daten können nur dann nach außen gesendet oder geschrieben werden, wenn der Benutzer sie bedient.</p>
 <ul>
-<li>Verzeichnisname, Dateiname</li>
-<li>SMB-Server Hostname, IP-Adresse, Portnummer, Kontoname, Passwort</li>
-<li>App-Einstellungswert </li>
+<li>Drücken Sie die Taste [Freigeben] auf der Registerkarte Verlauf.</li>
+<li>Klicken Sie in den Systeminformationen auf die Schaltfläche &quot;An Entwickler senden&quot;.</li>
+<li>Klicken Sie in der Protokollverwaltung auf die Schaltfläche &quot;An Entwickler senden&quot;.</li>
+<li>Klicken Sie in der Protokollverwaltung auf die Schaltfläche &quot;Protokolldatei exportieren&quot;, um in einen externen Speicher zu exportieren.</li>
+<li>Durch Ausführen von &quot;Einstellungen exportieren&quot; aus dem Menü wird &quot;1.1.Vom Benutzer an SMBSync3 bereitgestellte Daten&quot; exportiert werden.</li>
 
 </ul>
-<h2>3.Verwendungszweck der an den App-Entwickler gesendeten Daten</h2>
-<p>Die von den Benutzern der App an den Entwickler gesendeten Daten werden nur zur Lösung von Problemen mit der App verwendet und werden nicht an andere Personen als den Entwickler weitergegeben.</p>
-<h2>4.Berechtigungen</h2>
-<p>Die App benötigt die folgenden Berechtigungen.</p>
-<h3>4.1.Photos/Media/Files</h3>
-<p><strong>read the contents of your USB storage<br/>modify or delete the contents of your USB storage</strong> 
-Wird für die Dateisynchronisierung mit dem internen/externen Speicher und das Lesen/Schreiben der Verwaltungsdatei verwendet.</p>
-<h3>4.2.Storage</h3>
-<h3>4.2.1.Android11から</h3>
-<p><strong>Manage external storage</strong>  </p>
-<p>USBストレージへのファイル同期と管理ファイルの読み書きで使用します。</p>
-<h3>4.2.2.Android10まで</h3>
-<p><strong>read the contents of your USB storage<br/>modify or delete the contents of your USB storage</strong> <br/>Dient zur Dateisynchronisation mit dem USB-Speicher und zum Lesen/Schreiben der Verwaltungsdatei.</p>
-<h3>4.3.Wi-Fi Verbindungsinformationen</h3>
-<p><strong>view Wi-Fi connections</strong><br/>Dient zur Überprüfung des Wi-Fi-Status beim Start der Synchronisation.</p>
-<h3>4.4.Sonstiges</h3>
-<h3>4.4.1.view network connections</h3>
-<p>Wird verwendet, um zu bestätigen, dass beim Start der Synchronisierung eine Verbindung zum Netzwerk besteht.</p>
-<h3>4.4.2.connect and disconnect from Wi-Fi</h3>
-<p>Dient zum Ein- und Ausschalten von Wi-Fi bei der Zeitplansynchronisation in Andoid 8/9.</p>
-<h3>4.4.3.full network access</h3>
-<p>Wird verwendet, um die Synchronisierung mit dem SMB-Protokoll über das Netzwerk durchzuführen.</p>
-<h3>4.4.4.run at startup</h3>
-<p>Wird verwendet, um eine Zeitplansynchronisation durchzuführen.</p>
-<h3>4.4.5.control vibration</h3>
-<p>Wird verwendet, um den Benutzer am Ende der Synchronisation zu benachrichtigen.</p>
-<h3>4.4.6.prevent device from sleeping</h3>
-<p>Wird verwendet, um die Synchronisation von einem Zeitplan oder einer externen Anwendung aus zu starten.</p>
-<h3>4.4.7.install shortcuts</h3>
-<p>Wird verwendet, um eine Verknüpfung zum Starten der Synchronisierung auf dem Desktop hinzuzufügen.</p>
-<p> </p>
-<p> </p>
+<h3 id='15die-in-smbsync3-gespeicherten-daten-löschen'>1.5.die in SMBSync3 gespeicherten Daten löschen</h3>
+<p>Durch die Deinstallation von SMBSync3 werden die gespeicherten Daten (&quot;1.1.Vom Benutzer an SMBSync3 bereitgestellte Daten&quot;, &quot;1.2.Ausführungsergebnis von SMBSync3&quot;, &quot;1.3.Aktivitätsprotokoll von SMBSync3&quot;) vom Gerät gelöscht.
+<span style="color: red;"><u>Allerdings werden Daten, die aufgrund von Benutzerinteraktionen im externen Speicher gespeichert wurden, nicht gelöscht.</u></span></p>
+<h3 id='2erforderliche-berechtigungen-zum-ausführen-der-anwendung'>2.erforderliche Berechtigungen zum Ausführen der Anwendung</h3>
+<h3 id='21fotos-medien-dateien'>2.1.Fotos, Medien, Dateien</h3>
+<p><strong>Lesen Sie den Inhalt Ihres USB-Speichers</strong>.
+<strong>Ändern oder löschen Sie den Inhalt Ihres USB-Speichers</strong>.
+Wird für die Dateisynchronisation und das Lesen/Schreiben von Verwaltungsdateien verwendet.</p>
+<h3 id='22speicherung'>2.2.Speicherung</h3>
+<h3 id='221android11-oder-höher'>2.2.1.Android11 oder höher.</h3>
+<p><strong>Alle Dateizugriffe</strong>.</p>
+<p>Alle Dateizugriffe** Wird für die Dateisynchronisation und das Lesen/Schreiben von Verwaltungsdateien verwendet.</p>
+<h3 id='222android-10-oder-früher'>2.2.2.Android 10 oder früher</h3>
+<p><strong>Lesen Sie den Inhalt Ihres USB-Speichers</strong>.
+<strong>Ändern oder löschen Sie den Inhalt Ihres USB-Speichers</strong>.
+Wird für die Dateisynchronisation und das Lesen/Schreiben von Verwaltungsdateien verwendet.</p>
+<h3 id='23wi-fi-verbindungsinformationen'>2.3.Wi-Fi Verbindungsinformationen</h3>
+<p><strong>Wi-Fi-Verbindungen anzeigen</strong>.
+Wird verwendet, um den Wi-Fi-Status zu prüfen, wenn die Synchronisierung beginnt.</p>
+<h3 id='24andere'>2.4.Andere</h3>
+<h3 id='241view-network-connections'>2.4.1.View network connections</h3>
+<p>Verwenden Sie dies, um Netzwerkverbindungen zu prüfen, wenn die Synchronisierung gestartet wird.</p>
+<h3 id='242connect-and-disconnect-from-wi-fi'>2.4.2.connect and disconnect from Wi-Fi</h3>
+<p>Diese Funktion wird verwendet, um Wi-Fi für die geplante Synchronisierung auf Andoid 8/9 ein-/auszuschalten.</p>
+<h3 id='243full-network-access'>2.4.3.Full network access</h3>
+<p>Dies wird zur Synchronisierung über das SMB-Protokoll durch das Netzwerk verwendet.</p>
+<h3 id='244run-at-startup'>2.4.4.Run at startup</h3>
+<p>Wird verwendet, um eine geplante Synchronisierung durchzuführen.</p>
+<h3 id='245control-vibration'>2.4.5.Control vibration</h3>
+<p>Dies wird verwendet, um den Benutzer zu benachrichtigen, wenn die Synchronisierung beendet ist.</p>
+<h3 id='246prevent-device-from-sleeping'>2.4.6.Prevent device from sleeping</h3>
+<p>Dient zum Starten der Synchronisierung aus einem Zeitplan oder einer externen App.</p>
+<h3 id='247install-shortcuts'>2.4.7.Install shortcuts</h3>
+<p>Dient zum Hinzufügen einer Sync-Start-Verknüpfung auf dem Desktop.</p>
 </body>
 </html>
