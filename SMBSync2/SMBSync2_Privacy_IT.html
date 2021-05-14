@@ -4,69 +4,87 @@
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 <title>SMBSync2_Privacy_IT</title>
 </head>
-<body><h2 id='1-dati-registrati-dallapplicazione'>1. Dati registrati dall&#39;applicazione</h2>
-<p>L&#39;app registrerà un &quot;Elenco attività di sincronizzazione&quot; e, a seconda delle impostazioni, un &quot;Registro attività dell&#39;app&quot;. <span style="color: red; "><u>Inoltre, i dati registrati non verranno inviati dall&#39;app a meno che l&#39;utente non li abbia manipolati.</u></span></p>
-<h3 id='11-elenco-dei-compiti-di-sincronizzazione'>1.1. Elenco dei compiti di sincronizzazione</h3>
-<p>L&#39;app registra i dati necessari per eseguire la sincronizzazione.</p>
+<body><h2 id='1dati-raccolti'>1.Dati raccolti</h2>
+<h3 id='11dati-forniti-dallutente-a-smbsync2'>1.1.Dati forniti dall&#39;utente a SMBSync2</h3>
+<p>I dati forniti dall&#39;utente per utilizzare SMBSync2 saranno memorizzati nell&#39;area di archiviazione nell&#39;applicazione.
+Tuttavia, il nome dell&#39;account SMB, la password dell&#39;account SMB, la password ZIP e la password dell&#39;applicazione saranno criptati e memorizzati.
+<span style="color: red;"><u>I dati non saranno inviati all&#39;esterno a meno che non venga eseguita l&#39;operazione &quot;1.4.Invio o scrittura di dati al di fuori di SMBSync2&quot;.</u></span>.</p>
 <ul>
-<li>Nome della cartella, nome del file, nome host del server SMB, indirizzo IP, numero di porta, nome dell&#39;account, password (<strong>*1</strong>)</li>
-<li>Password dell&#39;applicazione (<strong>*1</strong>) per proteggere il lancio dell&#39;applicazione e la modifica delle impostazioni</li>
-<li>Impostazioni dell&#39;applicazione</li>
+<li>Informazioni sul file (nome della directory, nome del file)</li>
+<li>Informazioni sul server SMB (nome host/indirizzo IP, numero di porta, nome dell&#39;account, password dell&#39;account)</li>
+<li>Informazioni sul file ZIP (metodo di compressione, metodo di crittografia, password di crittografia)</li>
+<li>Opzioni di impostazione delle applicazioni (messaggi di avviso, lingua e dimensione dei caratteri, ecc.)</li>
+<li>Password dell&#39;applicazione (password usata per l&#39;autenticazione all&#39;avvio dell&#39;applicazione, autenticazione quando si cambiano le impostazioni di sicurezza, ecc.)</li>
 
 </ul>
-<p><strong>*1</strong> la password è criptata con una password generata dal sistema e memorizzata nel Keystore Android.</p>
-<h3 id='12-record-di-attività-dellapplicazione'>1.2. Record di attività dell&#39;applicazione</h3>
-<p>L&#39;app deve registrare i seguenti dati per verificare i risultati della sincronizzazione e per la risoluzione dei problemi.</p>
+<h3 id='12risultato-dellesecuzione-di-smbsync2'>1.2.Risultato dell&#39;esecuzione di SMBSync2</h3>
+<p>Salva i dati nell&#39;area di memorizzazione dell&#39;applicazione in modo che l&#39;utente possa controllare il risultato dell&#39;esecuzione di SMBSync2.
+<span style="color: red;"><u>I dati non saranno inviati all&#39;esterno a meno che non venga eseguita l&#39;operazione &quot;1.4.Invio o scrittura di dati al di fuori di SMBSync2&quot;.</u></span>.</p>
 <ul>
-<li>Versione Android, produttore del terminale, nome del terminale, modello del terminale, versione dell&#39;applicazione</li>
-<li>Nome della cartella, nome del file, dimensione del file, ultima modifica del file</li>
-<li>Nome host del server SMB, indirizzo IP, numero di porta, nome dell&#39;account</li>
-<li>Nome dell&#39;interfaccia di rete, indirizzo IP</li>
-<li>Impostazioni di sistema</li>
-<li>Impostazioni dell&#39;applicazione</li>
+<li>Nome della directory, nome del file, stato di esecuzione</li>
+<li>Dimensione dei file sincronizzati, data e ora di aggiornamento dei file</li>
+<li>Informazioni di errore</li>
 
 </ul>
-<h3 id='13-impostazioni-esportate-e-lista-dei-compiti-di-sincronizzazione'>1.3. Impostazioni esportate e lista dei compiti di sincronizzazione</h3>
-<p>L&#39;app può esportare &quot;1.1.Elenco dei compiti di sincronizzazione&quot; in un file. È possibile proteggere il file con una password prima di esportarlo.</p>
+<h3 id='13registro-di-attività-di-smbsync2'>1.3.Registro di attività di SMBSync2</h3>
+<p>Salva i dati nell&#39;area di memorizzazione dell&#39;applicazione per verificare il risultato dell&#39;esecuzione di SMBSync2 e per informare lo sviluppatore.
+<span style="color: red;"><u>I dati non saranno inviati all&#39;esterno a meno che non venga eseguita l&#39;operazione &quot;1.4.Invio o scrittura di dati al di fuori di SMBSync2&quot;.</u></span>.</p>
 <ul>
-<li>Nome della cartella, nome del file</li>
-<li>Nome host del server SMB, indirizzo IP, numero di porta, nome dell&#39;account, password</li>
-<li>Impostazioni dell&#39;applicazione</li>
+<li>Informazioni sul dispositivo (nome del produttore, nome del modello, versione del sistema operativo, punto di montaggio, directory specifica dell&#39;applicazione, StorageAccessFramework, gestore dello storage, indirizzo IP, abilitazione/disab</li>
+<li>Versione SMBSync2, opzioni di esecuzione SMBSync2</li>
+<li>Nome della directory, nome del file, stato di esecuzione</li>
+<li>Dimensione dei file sincronizzati, data e ora di aggiornamento dei file</li>
+<li>Informazioni di debug</li>
+<li>Informazioni di errore</li>
 
 </ul>
-<h3 id='14-inviare-i-dati-registrati-dallapp'>1.4. Inviare i dati registrati dall&#39;app</h3>
-<p>I dati registrati dall&#39;app possono essere inviati seguendo questi passi:</p>
+<h3 id='14invio-o-scrittura-di-dati-al-di-fuori-di-smbsync2'>1.4.Invio o scrittura di dati al di fuori di SMBSync2</h3>
+<p>I dati di SMBSync2 non possono essere inviati o scritti all&#39;esterno a meno che non sia l&#39;utente a farlo.</p>
 <ul>
-<li>Premere il &quot;Pulsante Condividi&quot; dalla scheda Cronologia</li>
-<li>Premere il pulsante &quot;Invia allo sviluppatore&quot; da &quot;Informazioni sul sistema&quot;.</li>
-<li>Premere il pulsante &quot;Condividi&quot; o &quot;Invia allo sviluppatore&quot; da &quot;Gestisci file di log&quot;.</li>
+<li>Premi [Pulsante di condivisione] dalla scheda Storia.</li>
+<li>Fare clic sul pulsante &quot;Invia allo sviluppatore&quot; da Informazioni di sistema.</li>
+<li>Cliquez sur le bouton &quot;Envoyer au développeur&quot; à partir de la gestion du journal.</li>
+<li>Eseguendo &quot;Impostazioni di esportazione&quot; dal menu, &quot;1.1.Dati forniti dall&#39;utente a SMBSync2&quot; saranno esportati.
+Specificando una password durante l&#39;esportazione, le informazioni vengono criptate e salvate nel file.</li>
 
 </ul>
-<h2 id='2-autorizzazioni'>2. Autorizzazioni</h2>
-<p>L&#39;applicazione utilizza le seguenti autorizzazioni.</p>
-<h3 id='21-fotomediafile'>2.1. Foto/Media/File</h3>
-<p><strong>read the contents of your USB storage</strong><br/><strong>modify or delete the contents of your USB storage</strong></p>
-<p>Necessario per la sincronizzazione dei file con la memoria interna/esterna/USB e per le operazioni di lettura/scrittura dei file di dati dell&#39;applicazione.</p>
-<h3 id='22-conservazione'>2.2. Conservazione</h3>
-<p><strong>read the contents of your USB storage</strong><br/><strong>modify or delete the contents of your USB storage</strong></p>
-<p>Necessario per la sincronizzazione dei file con la memoria interna/esterna/USB e per le operazioni di lettura/scrittura dei file di dati dell&#39;applicazione.</p>
-<h3 id='23-informazioni-sulla-connessione-wi-fi'>2.3. Informazioni sulla connessione Wi-Fi</h3>
-<p><strong>view Wi-Fi connections</strong></p>
-<p>Necessario per verificare lo stato del Wi-Fi (on/off) all&#39;inizio della sincronizzazione.</p>
-<h3 id='24-altro'>2.4. Altro</h3>
-<h3 id='241view-network-connections'>2.4.1.view network connections</h3>
-<p>Necessario per confermare che il dispositivo sia collegato alla rete all&#39;inizio della sincronizzazione.</p>
+<h3 id='15cancellare-i-dati-memorizzati-in-smbsync2'>1.5.Cancellare i dati memorizzati in SMBSync2</h3>
+<p>Disinstallando SMBSync2, &quot;1.1. Dati forniti dagli utenti a SMBSync2&quot; e &quot;1.3. Record di attività di SMBSync2&quot; saranno cancellati dal dispositivo.
+<span style="color: red;"><u>Tuttavia, le seguenti informazioni non saranno cancellate, quindi per favore cancella la directory &quot;/storage/emulated/0/SMBSync2&quot; e i file salvati nel file manager. </u></span>.</p>
+<ul>
+<li>&quot;1.2.Risultato dell&#39;esecuzione di SMBSync2&quot;</li>
+<li>Messaggio visualizzato (circa 5000 linee)</li>
+<li>Informazioni sul salvataggio dell&#39;elenco delle attività</li>
+<li>Data e ora dell&#39;aggiornamento del file (se il modello non permette l&#39;impostazione)</li>
+<li>Informazioni salvate nella memoria esterna salvando l&#39;elenco attività</li>
+
+</ul>
+<h3 id='2permessi-richiesti-per-eseguire-lapplicazione'>2.Permessi richiesti per eseguire l&#39;applicazione</h3>
+<h3 id='21foto-media-file'>2.1.Foto, media, file</h3>
+<p><strong>leggere il contenuto della vostra memoria USB</strong>.
+<strong>modificare o cancellare il contenuto della vostra memoria USB</strong>.
+Utilizzato per la sincronizzazione dei file e la lettura/scrittura di file di gestione.</p>
+<h3 id='22stoccaggio'>2.2.Stoccaggio</h3>
+<p><strong>leggere il contenuto della vostra memoria USB</strong>.
+<strong>modificare o cancellare il contenuto della vostra memoria USB</strong>.
+Utilizzato per la sincronizzazione dei file e la lettura/scrittura di file di gestione.</p>
+<h3 id='23informazioni-sulla-connessione-wi-fi'>2.3.Informazioni sulla connessione Wi-Fi</h3>
+<p><strong>vedi le connessioni Wi-Fi</strong>.
+Utilizzato per controllare lo stato del Wi-Fi quando inizia la sincronizzazione.</p>
+<h3 id='24altri'>2.4.Altri</h3>
+<h3 id='241view-network-connections'>2.4.1.View network connections</h3>
+<p>Usalo per controllare le connessioni di rete quando viene avviata la sincronizzazione.</p>
 <h3 id='242connect-and-disconnect-from-wi-fi'>2.4.2.connect and disconnect from Wi-Fi</h3>
-<p>Necessario per attivare/disattivare il Wi-Fi prima e dopo una sincronizzazione programmata.</p>
-<h3 id='243full-network-access'>2.4.3.full network access</h3>
-<p>Necessario per eseguire la sincronizzazione della rete utilizzando il protocollo SMB.</p>
-<h3 id='244run-at-startup'>2.4.4.run at startup</h3>
-<p>Necessario per eseguire la sincronizzazione programmata.</p>
-<h3 id='245control-vibration'>2.4.5.control vibration</h3>
-<p>Necessaria la notifica all&#39;utente tramite vibrazione al termine della sincronizzazione.</p>
-<h3 id='246prevent-device-from-sleeping'>2.4.6.prevent device from sleeping</h3>
-<p>Necessario per avviare la sincronizzazione da un&#39;applicazione programmata o esterna.</p>
-<h3 id='247install-shortcuts'>2.4.7.install shortcuts</h3>
-<p>Necessario per aggiungere una scorciatoia di sincronizzazione nella schermata iniziale.</p>
+<p>Questa funzione è usata per attivare/disattivare il Wi-Fi per la sincronizzazione programmata su Andoid 8/9.</p>
+<h3 id='243full-network-access'>2.4.3.Full network access</h3>
+<p>Questo è usato per sincronizzare tramite il protocollo SMB attraverso la rete.</p>
+<h3 id='244run-at-startup'>2.4.4.Run at startup</h3>
+<p>Utilizzato per eseguire la sincronizzazione programmata.</p>
+<h3 id='245control-vibration'>2.4.5.Control vibration</h3>
+<p>Questo è usato per notificare all&#39;utente quando la sincronizzazione è finita.</p>
+<h3 id='246prevent-device-from-sleeping'>2.4.6.Prevent device from sleeping</h3>
+<p>Utilizzato per avviare la sincronizzazione da una pianificazione o da un&#39;applicazione esterna.</p>
+<h3 id='247install-shortcuts'>2.4.7.Install shortcuts</h3>
+<p>Utilizzato per aggiungere un collegamento di avvio della sincronizzazione al desktop.</p>
 </body>
 </html>
