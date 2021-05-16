@@ -1,27 +1,27 @@
-## 1. Collected data
-### Data provided by users to TextFileBrowser.
+## 1. Collected data<br>
+### Data provided by users to TextFileBrowser.<br>
 
-There is no data provided by the user.
+There is no data provided by the user.<br>
 
-### Activity record of TextFileBrowser
+### Activity record of TextFileBrowser<br>
 
-For verification of the execution result of TextFileBrowser and for technical support, the activity record data is saved in the memory area in the application.
-<span style="color: red;"><u>The data will not be sent to the outside unless the operation "1.3. </u></span>.
+For verification of the execution result of TextFileBrowser and for technical support, the activity record data is saved in the memory area in the application.<br>
+<span style="color: red;"><u>The data will not be sent to the outside unless the operation "1.3. </u></span>.<br>
 
-- Version of TextFileBrowser, execution options of TextFileBrowser
-- Directory name, file name, file size, file content
-- Debugging information
-- Error information
+- Version of TextFileBrowser, execution options of TextFileBrowser<br>
+- Directory name, file name, file size, file content<br>
+- Debugging information<br>
+- Error information<br>
 
-### 1.3. Send data outside TextFileBrowser
+### 1.3. Send data outside TextFileBrowser<br>
 
-TextFileBrowser can not send data to outside unless the user does "Send Log" operation from the menu.
+TextFileBrowser can not send data to outside unless the user does "Send Log" operation from the menu.<br>
 
-### Delete data saved in TextFileBrowser
+### Delete data saved in TextFileBrowser<br>
 
-By uninstalling TextFileBrowser, the saved data ("1.2. Activity record of TextFileBrowser") will be deleted from the device.
-<span style="color: red;"><u>However, the data saved in external storage by the user's operation will not be deleted. </u></span>
+By uninstalling TextFileBrowser, the saved data ("1.2. Activity record of TextFileBrowser") will be deleted from the device.<br>
+<span style="color: red;"><u>However, the data saved in external storage by the user's operation will not be deleted. </u></span><br>
 
-## 2. Permissions required to run the app
+## 2. Permissions required to run the app<br>
 
-No additional permissions are required.
+No additional permissions are required.<br>
