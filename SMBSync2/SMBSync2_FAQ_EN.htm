@@ -435,9 +435,15 @@ style='page-break-before:always'>
 <h3 style='margin-top:18.0pt'><a name="_Toc66210668">1.1. Is there a
 bi-directional sync?</a></h3>
 
-<p class=MsoNormal>Bidirectional sync is not implemented because it is
-difficult to judge conflicting files (files updated on both sides, which file
-is newer, what file to keep…). </p>
+<p class=MsoNormal>In bidirectional synchronization, the system cannot judge
+conflicting files<b><u>(*1)</u></b>, so it is left to the user to decide. If
+the user makes a wrong decision, there is a high possibility that the file will
+be deleted, so we have not implemented it.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><u>*1</u></b> Files that have been updated by both
+parties and it is unclear which file is the newest</p>
 
 <h3 style='margin-top:18.0pt'><a name="_Toc66210669">1.2. </a><a
 name="_Hlk39665471">File filter: sync specific file types (exp. PDF, Excel…)</a></h3>
@@ -552,7 +558,7 @@ width=163 height=298 src="SMBSync2_FAQ_EN.files/image010.jpg"></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>Please check the following link.</p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt'>https://dontkillmyapp.com/</p>
@@ -567,9 +573,9 @@ on WiFi manually.</p>
 <h3 style='margin-top:18.0pt'><a name="_Toc66210674"></a><a name="_Toc57325007">1.7.</a>
 Want to start synchronizing only in certain places (such as home)</h3>
 
-<p class=MsoNormal align=left style='text-align:left'>Le nom du point d'accès n'est
-pas disponible car le SSID WiFi (nom du point d'accès) n'est plus lisible du
-fait que nous avons décidé de ne pas utiliser les privilèges de localisation
+<p class=MsoNormal align=left style='text-align:left'>Le nom du point d'accès
+n'est pas disponible car le SSID WiFi (nom du point d'accès) n'est plus lisible
+du fait que nous avons décidé de ne pas utiliser les privilèges de localisation
 pour nous conformer aux règles de confidentialité de Google Play.</p>
 
 <p class=MsoNormal align=left style='text-align:left'>Vous pouvez commencer la
@@ -672,19 +678,19 @@ height=612 id="図 18" src="SMBSync2_FAQ_EN.files/image015.jpg"></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 lang=FR-CH style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang=FR-CH style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Action
 : com.sentaroh.android.SMBSync2.ACTION_START_SYNC</span></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Extra
 : SyncProfile:prof1, prof2</span></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>Target
 : Activity</span></p>
 
@@ -742,8 +748,9 @@ style='page-break-before:always'>
 <h2 style='margin-top:18.0pt'><a name="_Toc66210682"></a><a name="_Toc58149376">4.2.</a>
 SDCARD or USB media is not recognized by the application</h2>
 
-<p class=MsoNormal>For SMBSync2, the SDCARD or USB media must be mounted in /storage/xxxx-xxxx.
-(xxxx-xxxx is a UUID and is a combination of alphanumeric characters.)</p>
+<p class=MsoNormal>For SMBSync2, the SDCARD or USB media must be mounted in
+/storage/xxxx-xxxx. (xxxx-xxxx is a UUID and is a combination of alphanumeric
+characters.)</p>
 
 <p class=MsoNormal>You can check the system information to see if it is
 mounted, or if it is a USB drive, check the system information after connecting
@@ -756,7 +763,7 @@ width=495 height=310 src="SMBSync2_FAQ_EN.files/image022.jpg"></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>SDCARD</p>
 
 <p class=MsoListParagraph style='margin-left:18.0pt'><span style='font-size:
@@ -764,7 +771,7 @@ src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times 
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>USB<span lang=JA style='font-family:"ＭＳ 明朝","serif"'>メディア</span></p>
 
 <p class=MsoListParagraph style='margin-left:42.0pt;text-indent:-21.0pt'><span
@@ -869,17 +876,17 @@ host name will fail.</p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>Start the virtual machine</p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>Disable the virtual network adapter</p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>If any of the above methods cannot fix the connection problem, specify
 the IP address instead of the host name</p>
 
@@ -936,7 +943,7 @@ manually save the settings.</span></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>Save settings</p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt'>In the App menu, tap “Export
@@ -959,7 +966,7 @@ id="図 12" src="SMBSync2_FAQ_EN.files/image034.jpg"></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
 style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+src="SMBSync2_FAQ_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>Restore settings</p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt'>In the App menu, tap “Import

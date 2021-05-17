@@ -26,14 +26,14 @@
 	{font-family:"MS UI Gothic";
 	panose-1:2 11 6 0 7 2 5 8 2 4;}
 @font-face
-	{font-family:"\@ＭＳ 明朝";
-	panose-1:2 2 6 9 4 2 5 8 3 4;}
-@font-face
 	{font-family:"\@ＭＳ ゴシック";
 	panose-1:2 11 6 9 7 2 5 8 2 4;}
 @font-face
 	{font-family:"\@MS UI Gothic";
 	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
 	{margin:0cm;
@@ -466,7 +466,12 @@ style='font-family:"ＭＳ ゴシック"'>同期</span></h1>
 <h2 style='margin-top:18.0pt'><a name="_Toc66210732">1.1.</a><span lang=JA
 style='font-family:"ＭＳ ゴシック"'>双方向の同期はできないのですか</span></h2>
 
-<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>双方向同期は競合ファイル（双方でファイルを更新した結果、どちらのファイルが新しいのか不明なファイル）の判定が難しいため実装していません。</span></p>
+<p class=MsoNormal><span lang=JA style='font-family:"ＭＳ 明朝","serif"'>双方向同期は競合ファイル</span><b><u>(*1)</u></b><span
+lang=JA style='font-family:"ＭＳ 明朝","serif"'>をシステムで判定できないためユーザーに判定を委ねる事になります。ユーザーが誤った判定を行うとファイルを削除してしまう可能性が高いため実装していません。</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><u>*1</u></b> <span lang=JA style='font-family:"ＭＳ 明朝","serif"'>双方でファイルを更新した結果、どちらのファイルが新しいのか不明なファイル）</span></p>
 
 <h2 style='margin-top:18.0pt'><a name="_Toc66210733">1.2.PDF</a><span lang=JA
 style='font-family:"ＭＳ ゴシック"'>や</span>Excel<span lang=JA style='font-family:

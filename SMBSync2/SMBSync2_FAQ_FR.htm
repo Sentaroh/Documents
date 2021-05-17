@@ -430,10 +430,16 @@ style='page-break-before:always'>
 <h3 style='margin-top:18.0pt'><a name="_Toc58149927">1.1. Y a-t-il une
 synchronisation bidirectionnelle ?</a></h3>
 
-<p class=MsoNormal>La synchronisation bidirectionnelle n'est pas mise en œuvre
-car il est difficile de juger des fichiers conflictuels (fichiers mis à jour
-des deux côtés, quel fichier est le plus récent, quel fichier conserver...).
-J'envisage de la mettre en œuvre à l'avenir.</p>
+<p class=MsoNormal>Dans le cas de la synchronisation bidirectionnelle, le
+système ne peut pas juger des fichiers en conflit<b><u>(*1)</u></b>, c'est donc
+à l'utilisateur de décider. Si l'utilisateur prend une mauvaise décision, il y
+a de fortes chances que le fichier soit supprimé, c'est pourquoi nous ne
+l'avons pas implémenté.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><u>*1</u></b> Fichiers qui ont été mis à jour par les
+deux parties et il n'est pas clair quel fichier est le plus récent</p>
 
 <h3 style='margin-top:18.0pt'><a name="_Toc58149928">1.2. Filtre de fichiers :
 synchronisation de types de fichiers spécifiques (exp. PDF, Excel...)</a></h3>
@@ -469,7 +475,7 @@ inclus (ne synchroniser que les fichiers ayant l'extension *.pdf spécifiée dan
 l'exemple), ou exclu (ne pas synchroniser les fichiers ayant l'extension *.pdf
 spécifiée dans cet exemple)</p>
 
-<p class=MsoNormal>   <img width=385 height=216
+<p class=MsoNormal>   <img width=385 height=216
 src="SMBSync2_FAQ_FR.files/image005.png"></p>
 
 <p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
@@ -477,7 +483,7 @@ style='font-family:Symbol'><img width=11 height=11
 src="SMBSync2_FAQ_FR.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>Terminé</p>
 
-<p class=MsoNormal>   <img width=384 height=216
+<p class=MsoNormal>   <img width=384 height=216
 src="SMBSync2_FAQ_FR.files/image006.png"></p>
 
 <h3 style='margin-top:18.0pt'><a name="_Toc58149929">1.3. L'heure de la
@@ -898,8 +904,8 @@ Impossible de se connecter au serveur SMB avec un nom d'hôte</h3>
 
 <p class=MsoNormal>Si le nom d'hôte est spécifié pour accéder au serveur SMB,
 et que le serveur SMB est connecté par un réseau virtuel fonctionnant dans une
-machine virtuelle dans un environnement tel que VirtualBox, la résolution
-d'adresse à partir du nom d'hôte échouera.</p>
+machine virtuelle dans un environnement tel que VirtualBox, la résolution d'adresse
+à partir du nom d'hôte échouera.</p>
 
 <p class=MsoNormal>&nbsp;</p>
 
@@ -935,8 +941,7 @@ IP.</span></p>
 10.5pt'>Exemples de filtres :</span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
-10.5pt'>&quot;192.168.*&quot;         : 192.168.0.0 - 192.168.255.255 est
-autorisé</span></p>
+10.5pt'>&quot;192.168.*&quot;         : 192.168.0.0 - 192.168.255.255 est autorisé</span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><span style='font-size:
 10.5pt'>&quot;192.168.*. *&quot;     : 192.168.0.0 - 192.168.255.255 est

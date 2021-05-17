@@ -1,27 +1,27 @@
-## 1.収集データ<br>
-### 1.1.ユーザーからTextFileBrowserに提供されるデータ<br>
+## 1.収集データ
+### 1.1.ユーザーからTextFileBrowserに提供されるデータ
 
-ユーザーから提供されるデータは有りません。<br>
+ユーザーから提供されるデータは有りません。
 
-### 1.2.TextFileBrowserの活動記録<br>
+### 1.2.TextFileBrowserの活動記録
 
-TextFileBrowserの実行結果の検証と技術サポートのために活動記録データをアプリ内の記憶領域に保存します。<br>
-<span style="color: red;"><u>データは”1.3.TextFileBrowser外へのデータの送信または書出し”の操作が無い限り外部に送信されません。</u></span><br>
+ログを有効にすることによりアプリの実行結果の検証と技術サポートのために活動記録データをアプリ内の記憶領域に保存します。ログを無効にした場合はデータの記録は停止します、ただし、既に記録したデータは削除されません。
+<span style="color: red;"><u>データは「1.3.TextFileBrowser外へのデータの送信」操作が行われない無い限り外部に送信されません。</u></span>
 
-- TextFileBrowserのバージョン、TextFileBrowserの実行オプション<br>
-- ディレクトリー名、ファイル名、ファイルサイズ、ファイル内容<br>
-- デバッグ情報<br>
-- エラー情報<br>
+- TextFileBrowserのバージョン、TextFileBrowserの実行オプション
+- ディレクトリー名、ファイル名、ファイルサイズ、ファイル内容
+- デバッグ情報
+- エラー情報
 
-### 1.3.TextFileBrowser外へのデータの送信<br>
+### 1.3.TextFileBrowser外へのデータの送信
 
-ユーザーがメニューから「ログの送信」操作しない限りTextFileBrowserが保有するデータは外部に送信できません。<br>
+ユーザーが操作しない限りTextFileBrowserが保有するデータは外部に送信または書出しはできません。
 
-### 1.4.TextFileBrowser内に保存されたデータの削除<br>
+### 1.4.TextFileBrowser内に保存されたデータの削除
 
-TextFileBrowserをアンインストールする事により保存したデータ("1.2.TextFileBrowserの活動記録")はデバイスから削除されます。<br>
-<span style="color: red; "><u>ただし、ユーザーの操作により外部ストレージに保存されたデータは削除されません。</u></span><br>
+TextFileBrowserをアンインストールする事により保存したデータ("1.2.TextFileBrowserの活動記録")はデバイスから削除されます。
+<span style="color: red; "><u>ただし、ユーザーの操作により外部ストレージに保存されたデータは削除されません。</u></span>
 
-## 2.アプリ実行に必要な権限<br>
+## 2.アプリ実行に必要な権限
 
-追加の権限は不要です。<br>
+追加の権限は不要です。
