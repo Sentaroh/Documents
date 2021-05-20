@@ -3,6 +3,8 @@
 ### Manuals
 - [Feature Description](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Desc_EN.htm)
 - [機能の説明](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Desc_JA.htm)
+- [Logging](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Log_EN.htm)
+- [ログ取得](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_Log_JA.htm)
 
 ### FAQ
 - [Frequently Asked Questions](https://sentaroh.github.io/Documents/SMBSync3/SMBSync3_FAQ_EN.htm)
