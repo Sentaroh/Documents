@@ -6,16 +6,23 @@
 </head>
 <body><h2 id='1dati-raccolti'>1.Dati raccolti  </h2>
 <h3 id='11dati-forniti-dallutente-a-smbsync3'>1.1.Dati forniti dall&#39;utente a SMBSync3  </h3>
-<p>I seguenti dati forniti dall&#39;utente per utilizzare SMBSync3 saranno memorizzati nell&#39;area di memoria dell&#39;applicazione.  </p>
+<h4 id='111dati-da-salvare'>1.1.1.Dati da salvare  </h4>
+<p>I seguenti dati saranno salvati nell&#39;applicazione.  </p>
 <ul>
 <li>Informazioni sul file (nome della directory, nome del file)  </li>
 <li>Informazioni sul server SMB se si usa un server SMB (nome host/indirizzo IP, numero di porta, nome dell&#39;account(<strong><u>*1</u></strong>), password dell&#39;account(<strong><u>*1</u></strong>))  </li>
 <li>Informazioni sul file ZIP se si usa un file ZIP (metodo di compressione, metodo di crittografia, password di crittografia(<strong><u>*1</u></strong>))  </li>
 <li>Opzioni di impostazione delle applicazioni (messaggi di avviso, lingua e dimensione dei caratteri, ecc.)  </li>
-<li>Password dell&#39;applicazione(<strong><u>*1</u></strong>)  </li>
+<li>Password dell&#39;applicazione(<strong><u>*1</u></strong>)<br/>La password creata dall&#39;utente viene utilizzata per l&#39;autenticazione dell&#39;avvio dell&#39;applicazione, per le modifiche delle impostazioni, ecc.  </li>
 
 </ul>
 <p><strong><u>*1</u></strong>I dati sono criptati e conservati.  </p>
+<h4 id='112dati-da-non-salvare'>1.1.2.Dati da non salvare  </h4>
+<p>I seguenti dati non saranno salvati.  </p>
+<ul>
+<li>Password per proteggere i dati in &quot;1.4.Invio o scrittura di dati al di fuori di SMBSync3&quot;<br/>La password sarà scartata e non salvata al termine del processo.  </li>
+
+</ul>
 <h3 id='12risultato-dellesecuzione-di-smbsync3'>1.2.Risultato dell&#39;esecuzione di SMBSync3  </h3>
 <p>Salva i dati nell&#39;area di memorizzazione dell&#39;applicazione in modo che l&#39;utente possa controllare il risultato dell&#39;esecuzione di SMBSync3.  </p>
 <ul>
@@ -24,8 +31,8 @@
 <li>Informazioni di errore  </li>
 
 </ul>
-<h3 id='13registro-di-attività-di-smbsync3'>1.3.Registro di attività di SMBSync3  </h3>
-<p>Abilitando la registrazione verranno salvati i dati di registrazione dell&#39;attività nell&#39;area di memoria dell&#39;app per la verifica dei risultati di esecuzione dell&#39;app e per il supporto tecnico. Quando la registrazione è disabilitata, la registrazione dei dati verrà interrotta. Tuttavia, i dati già registrati non saranno cancellati, quindi puoi cancellarli se ne hai bisogno.  </p>
+<h3 id='13registro-delle-attività-di-smbsync3'>1.3.Registro delle attività di SMBSync3  </h3>
+<p>Quando la registrazione è abilitata, i dati dell&#39;attività saranno memorizzati nell&#39;area di memoria dell&#39;app per la verifica dei risultati di esecuzione dell&#39;app e per il supporto tecnico. Se la registrazione è disabilitata, la registrazione dei dati verrà interrotta, ma i dati già registrati non verranno cancellati.  </p>
 <ul>
 <li>Informazioni sul dispositivo (nome del produttore, nome del modello, versione del sistema operativo, punto di montaggio, directory specifica dell&#39;applicazione, StorageAccessFramework, gestore dello storage, indirizzo IP, abilitazione/disab  </li>
 <li>Versione SMBSync3, opzioni di esecuzione SMBSync3  </li>
@@ -38,25 +45,25 @@
 <h3 id='14invio-o-scrittura-di-dati-al-di-fuori-di-smbsync3'>1.4.Invio o scrittura di dati al di fuori di SMBSync3  </h3>
 <p><span style="color: red;"><u>I dati di SMBSync3 non possono essere inviati o scritti all&#39;esterno a meno che non sia l&#39;utente a farlo.</u></span>  </p>
 <ul>
-<li>Premi [Pulsante di condivisione] dalla scheda Storia.  </li>
+<li>Premi &quot;Pulsante di condivisione&quot; dalla scheda Storia.  </li>
 <li>Fare clic sul pulsante &quot;Invia allo sviluppatore&quot; da Informazioni di sistema.  </li>
-<li>Cliquez sur le bouton &quot;Envoyer au développeur&quot; à partir de la gestion du journal.  </li>
+<li>Fare clic sul pulsante &quot;Condividi&quot; dalla gestione del registro.  </li>
+<li>Cliquez sur le bouton &quot;Envoyer au développeur&quot; à partir de la gestion du journal.<br/>Se si specifica una password, il file allegato sarà protetto da password. La password verrà eliminata quando si chiude lo schermo e non verrà salvata.  </li>
 <li>Fare clic sul pulsante &quot;Export log file&quot; dalla gestione dei registri per esportare su una memoria esterna.  </li>
-<li>Eseguendo &quot;Impostazioni di esportazione&quot; dal menu, &quot;1.1.Dati forniti dall&#39;utente a SMBSync3&quot; saranno esportati.<br/>Le informazioni saranno criptate specificando una password durante l&#39;esportazione.  </li>
+<li>Eseguendo &quot;Impostazioni di esportazione&quot; dal menu, &quot;1.1.Dati forniti dall&#39;utente a SMBSync3&quot; saranno esportati.<br/>Le informazioni saranno criptate specificando una password durante l&#39;esportazione. La password verrà eliminata quando si chiude lo schermo e non verrà salvata.  </li>
 
 </ul>
 <h3 id='15cancellare-i-dati-memorizzati-in-smbsync3'>1.5.Cancellare i dati memorizzati in SMBSync3  </h3>
-<p>Disinstallando SMBSync3, i dati salvati (&quot;1.1.Dati forniti dall&#39;utente a SMBSync3&quot;, &quot;1.2.Risultato dell&#39;esecuzione di SMBSync3&quot;, &quot;1.3.Registro di attività di SMBSync3&quot;) saranno cancellati dal dispositivo.<br/><span style="color: red;"><u>Tuttavia, i dati memorizzati nella memoria esterna a causa dell&#39;interazione dell&#39;utente non saranno cancellati.</u></span>  </p>
+<p>Disinstallando SMBSync3, i dati salvati (&quot;1.1.Dati forniti dall&#39;utente a SMBSync3&quot;, &quot;1.2.Risultato dell&#39;esecuzione di SMBSync3&quot;, &quot;1.3.Registro delle attività di SMBSync3&quot;) saranno cancellati dal dispositivo.<br/><span style="color: red;"><u>Tuttavia, i dati memorizzati nella memoria esterna a causa dell&#39;interazione dell&#39;utente non saranno cancellati.</u></span>  </p>
 <h3 id='2permessi-richiesti-per-eseguire-lapplicazione'>2.Permessi richiesti per eseguire l&#39;applicazione  </h3>
 <h3 id='21stoccaggio'>2.1.Stoccaggio  </h3>
 <h3 id='211android11-o-successivo'>2.1.1.Android11 o successivo.  </h3>
-<p><strong>Tutti gli accessi ai file</strong>.  </p>
-<p>Tutti gli accessi ai file** Usato per la sincronizzazione dei file e la gestione dei file in lettura/scrittura.  </p>
+<p><strong><u>All file access</u></strong><br/>Tutti gli accessi ai file** Usato per la sincronizzazione dei file e la gestione dei file in lettura/scrittura.  </p>
 <h3 id='212android-10-o-prima'>2.1.2.Android 10 o prima  </h3>
 <h4 id='2121foto-media-file'>2.1.2.1.Foto, media, file  </h4>
-<p><strong>&quot;read the contents of your USB storage&quot;</strong><br/><strong>&quot;modify or delete the contents of your USB storage&quot;</strong><br/>Utilizzato per la sincronizzazione dei file e la lettura/scrittura di file di gestione.  </p>
+<p><strong><u>read the contents of your USB storage</u></strong><br/><strong><u>modify or delete the contents of your USB storage</u></strong><br/>Utilizzato per la sincronizzazione dei file e la lettura/scrittura di file di gestione.  </p>
 <h3 id='22informazioni-sulla-connessione-wi-fi'>2.2.Informazioni sulla connessione Wi-Fi  </h3>
-<p><strong>vedi le connessioni Wi-Fi</strong>.<br/>Utilizzato per controllare lo stato del Wi-Fi quando inizia la sincronizzazione.  </p>
+<p><strong>vedi le connessioni Wi-Fi</strong>.<br/>Usalo per controllare le connessioni di rete quando viene avviata la sincronizzazione.  </p>
 <h3 id='23altri'>2.3.Altri  </h3>
 <h3 id='231view-network-connections'>2.3.1.View network connections  </h3>
 <p>Usalo per controllare le connessioni di rete quando viene avviata la sincronizzazione.  </p>
@@ -65,11 +72,11 @@
 <h3 id='233full-network-access'>2.3.3.Full network access  </h3>
 <p>Questo è usato per sincronizzare tramite il protocollo SMB attraverso la rete.  </p>
 <h3 id='234run-at-startup'>2.3.4.Run at startup  </h3>
-<p>Utilizzato per eseguire la sincronizzazione programmata.  </p>
+<p>Utilizzato per inizializzare la sincronizzazione programmata al riavvio del dispositivo.  </p>
 <h3 id='235control-vibration'>2.3.5.Control vibration  </h3>
 <p>Questo è usato per notificare all&#39;utente quando la sincronizzazione è finita.  </p>
 <h3 id='236prevent-device-from-sleeping'>2.3.6.Prevent device from sleeping  </h3>
-<p>Utilizzato per avviare la sincronizzazione da una pianificazione o da un&#39;applicazione esterna.  </p>
+<p>Utilizzato per evitare che il dispositivo vada a dormire durante la sincronizzazione.  </p>
 <h3 id='237install-shortcuts'>2.3.7.Install shortcuts  </h3>
 <p>Utilizzato per aggiungere un collegamento di avvio della sincronizzazione al desktop.  </p>
 </body>

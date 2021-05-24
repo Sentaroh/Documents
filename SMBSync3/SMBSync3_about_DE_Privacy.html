@@ -6,16 +6,23 @@
 </head>
 <body><h2 id='1erfasste-daten'>1.Erfasste Daten  </h2>
 <h3 id='11vom-benutzer-an-smbsync3-bereitgestellte-daten'>1.1.Vom Benutzer an SMBSync3 bereitgestellte Daten  </h3>
-<p>Die folgenden Daten, die der Benutzer zur Verwendung von SMBSync3 bereitstellt, werden im Speicherbereich der Anwendung gespeichert.  </p>
+<h4 id='111zu-speichernde-daten'>1.1.1.Zu speichernde Daten  </h4>
+<p>Die folgenden Daten werden in der Anwendung gespeichert.  </p>
 <ul>
 <li>Dateiinformationen (Verzeichnisname, Dateiname)  </li>
 <li>SMB-Server-Informationen, wenn Sie einen SMB-Server verwenden (Hostname/IP-Adresse, Portnummer, Kontoname(<strong><u>*1</u></strong>), Kontopasswort(<strong><u>*1</u></strong>))  </li>
 <li>ZIP-Datei-Informationen, wenn eine ZIP-Datei verwendet wird (Komprimierungsmethode, Verschlüsselungsmethode, Verschlüsselungspasswort)  </li>
 <li>App-Einstellungsoptionen (Warnmeldungen, Sprache und Schriftgröße usw.)  </li>
-<li>Anwendungskennwort(<strong><u>*1</u></strong>)  </li>
+<li>Anwendungskennwort(<strong><u>*1</u></strong>)<br/>Das vom Benutzer erstellte Kennwort wird zur Authentifizierung beim Start der Anwendung, bei Einstellungsänderungen usw. verwendet.  </li>
 
 </ul>
 <p><strong><u>*1</u></strong>Die Daten werden verschlüsselt gespeichert.  </p>
+<h4 id='112nicht-zu-speichernde-daten'>1.1.2.Nicht zu speichernde Daten  </h4>
+<p>Die folgenden Daten werden nicht gespeichert.  </p>
+<ul>
+<li>Passwort zum Schutz von Daten in &quot;1.4.das Senden oder Schreiben von Daten außerhalb von SMBSync3&quot;<br/>Das Passwort wird verworfen und nicht gespeichert, wenn der Vorgang beendet ist.  </li>
+
+</ul>
 <h3 id='12ausführungsergebnis-von-smbsync3'>1.2.Ausführungsergebnis von SMBSync3  </h3>
 <p>Speichern Sie die Daten im Speicherbereich in der Anwendung, damit der Benutzer das Ausführungsergebnis von SMBSync3 überprüfen kann.  </p>
 <ul>
@@ -25,7 +32,7 @@
 
 </ul>
 <h3 id='13aktivitätsprotokoll-von-smbsync3'>1.3.Aktivitätsprotokoll von SMBSync3  </h3>
-<p>Wenn Sie die Protokollierung aktivieren, werden die Daten der Aktivitätsaufzeichnung im Speicherbereich der App zur Überprüfung der Ausführungsergebnisse der App und für den technischen Support gespeichert. Wenn die Protokollierung deaktiviert ist, wird die Datenaufzeichnung gestoppt. Die bereits aufgezeichneten Daten werden jedoch nicht gelöscht, so dass Sie sie bei Bedarf löschen können.  </p>
+<p>Wenn die Protokollierung aktiviert ist, werden Aktivitätsdaten im Speicherbereich der App zur Überprüfung der Ausführungsergebnisse der App und für den technischen Support gespeichert. Wenn die Protokollierung deaktiviert ist, wird die Datenaufzeichnung gestoppt, bereits aufgezeichnete Daten werden jedoch nicht gelöscht.  </p>
 <ul>
 <li>Geräteinformationen (Herstellername, Modellname, OS-Version, Mount-Point, App-spezifisches Verzeichnis, StorageAccessFramework, Speichermanager, IP-Adresse, WiFi enable/disable, WiFi link speed)  </li>
 <li>SMBSync3-Version, SMBSync3-Ausführungsoptionen  </li>
@@ -38,11 +45,12 @@
 <h3 id='14das-senden-oder-schreiben-von-daten-außerhalb-von-smbsync3'>1.4.das Senden oder Schreiben von Daten außerhalb von SMBSync3  </h3>
 <p><span style="color: red;"><u>SMBSync3-Daten können nur dann nach außen gesendet oder geschrieben werden, wenn der Benutzer sie bedient.</u></span>  </p>
 <ul>
-<li>Drücken Sie die Taste [Freigeben] auf der Registerkarte Verlauf.  </li>
+<li>Drücken Sie die Taste &quot;Freigeben&quot; auf der Registerkarte Verlauf.  </li>
 <li>Klicken Sie in den Systeminformationen auf die Schaltfläche &quot;An Entwickler senden&quot;.  </li>
-<li>Klicken Sie in der Protokollverwaltung auf die Schaltfläche &quot;An Entwickler senden&quot;.  </li>
+<li>Klicken Sie in der Protokollverwaltung auf die Schaltfläche &quot;Freigeben&quot;.  </li>
+<li>Klicken Sie in der Protokollverwaltung auf die Schaltfläche &quot;An Entwickler senden&quot;.<br/>Wenn Sie ein Passwort angeben, wird die angehängte Datei mit einem Passwort geschützt. Das Kennwort wird verworfen, wenn Sie den Bildschirm schließen, und wird nicht gespeichert.  </li>
 <li>Klicken Sie in der Protokollverwaltung auf die Schaltfläche &quot;Protokolldatei exportieren&quot;, um in einen externen Speicher zu exportieren.  </li>
-<li>Durch Ausführen von &quot;Einstellungen exportieren&quot; aus dem Menü wird &quot;1.1.Vom Benutzer an SMBSync3 bereitgestellte Daten&quot; exportiert werden.<br/>Die Informationen werden verschlüsselt, indem Sie beim Exportieren ein Passwort angeben.  </li>
+<li>Durch Ausführen von &quot;Einstellungen exportieren&quot; aus dem Menü wird &quot;1.1.Vom Benutzer an SMBSync3 bereitgestellte Daten&quot; exportiert werden.<br/>Die Informationen werden verschlüsselt, indem Sie beim Exportieren ein Passwort angeben. Das Kennwort wird verworfen, wenn Sie den Bildschirm schließen, und wird nicht gespeichert.  </li>
 
 </ul>
 <h3 id='15die-in-smbsync3-gespeicherten-daten-löschen'>1.5.die in SMBSync3 gespeicherten Daten löschen  </h3>
@@ -50,13 +58,12 @@
 <h3 id='2erforderliche-berechtigungen-zum-ausführen-der-anwendung'>2.erforderliche Berechtigungen zum Ausführen der Anwendung  </h3>
 <h3 id='21speicherung'>2.1.Speicherung  </h3>
 <h3 id='211android11-oder-höher'>2.1.1.Android11 oder höher.  </h3>
-<p><strong>Alle Dateizugriffe</strong>.  </p>
-<p>Alle Dateizugriffe** Wird für die Dateisynchronisation und das Lesen/Schreiben von Verwaltungsdateien verwendet.  </p>
+<p><strong><u>All file access</u></strong><br/>Alle Dateizugriffe** Wird für die Dateisynchronisation und das Lesen/Schreiben von Verwaltungsdateien verwendet.  </p>
 <h3 id='212android-10-oder-früher'>2.1.2.Android 10 oder früher  </h3>
 <h4 id='2121fotos-medien-dateien'>2.1.2.1.Fotos, Medien, Dateien  </h4>
-<p><strong>&quot;read the contents of your USB storage&quot;</strong><br/><strong>&quot;modify or delete the contents of your USB storage&quot;</strong><br/>Wird für die Dateisynchronisation und das Lesen/Schreiben von Verwaltungsdateien verwendet.  </p>
+<p><strong><u>read the contents of your USB storage</u></strong><br/><strong><u>modify or delete the contents of your USB storage</u></strong><br/>Wird für die Dateisynchronisation und das Lesen/Schreiben von Verwaltungsdateien verwendet.  </p>
 <h3 id='22wi-fi-verbindungsinformationen'>2.2.Wi-Fi Verbindungsinformationen  </h3>
-<p><strong>Wi-Fi-Verbindungen anzeigen</strong>.<br/>Wird verwendet, um den Wi-Fi-Status zu prüfen, wenn die Synchronisierung beginnt.  </p>
+<p><strong>Wi-Fi-Verbindungen anzeigen</strong>.<br/>Verwenden Sie dies, um Netzwerkverbindungen zu prüfen, wenn die Synchronisierung gestartet wird.  </p>
 <h3 id='23andere'>2.3.Andere  </h3>
 <h3 id='231view-network-connections'>2.3.1.View network connections  </h3>
 <p>Verwenden Sie dies, um Netzwerkverbindungen zu prüfen, wenn die Synchronisierung gestartet wird.  </p>
@@ -65,11 +72,11 @@
 <h3 id='233full-network-access'>2.3.3.Full network access  </h3>
 <p>Dies wird zur Synchronisierung über das SMB-Protokoll durch das Netzwerk verwendet.  </p>
 <h3 id='234run-at-startup'>2.3.4.Run at startup  </h3>
-<p>Wird verwendet, um eine geplante Synchronisierung durchzuführen.  </p>
+<p>Wird verwendet, um die geplante Synchronisierung beim Neustart des Geräts zu initialisieren.  </p>
 <h3 id='235control-vibration'>2.3.5.Control vibration  </h3>
 <p>Dies wird verwendet, um den Benutzer zu benachrichtigen, wenn die Synchronisierung beendet ist.  </p>
 <h3 id='236prevent-device-from-sleeping'>2.3.6.Prevent device from sleeping  </h3>
-<p>Dient zum Starten der Synchronisierung aus einem Zeitplan oder einer externen App.  </p>
+<p>Wird verwendet, um zu verhindern, dass das Gerät während der Synchronisierung in den Ruhezustand geht.  </p>
 <h3 id='237install-shortcuts'>2.3.7.Install shortcuts  </h3>
 <p>Dient zum Hinzufügen einer Sync-Start-Verknüpfung auf dem Desktop.  </p>
 </body>

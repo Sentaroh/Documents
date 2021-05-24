@@ -6,16 +6,23 @@
 </head>
 <body><h2 id='1-collected-data'>1. Collected data  </h2>
 <h3 id='11data-provided-to-smbsync3-from-users'>1.1.Data provided to SMBSync3 from users.  </h3>
-<p>The following data provided by the user to use SMBSync3 will be stored in the memory area of the application.  </p>
+<h4 id='111data-to-be-saved'>1.1.1.Data to be saved  </h4>
+<p>The following data will be saved in the application.  </p>
 <ul>
 <li>File information (directory name, file name)  </li>
 <li>SMB server information if using SMB server (host name/IP address, port number, account name(<strong><u>*1</u></strong>), account password(<strong><u>*1</u></strong>))  </li>
 <li>ZIP file information if using a ZIP file (compression method, encryption method, encryption password(<strong><u>*1</u></strong>))  </li>
 <li>App setting options (warning messages, language and font size, etc.)  </li>
-<li>Application passwords(<strong><u>*1</u></strong>)  </li>
+<li>Application passwords(<strong><u>*1</u></strong>)<br/>The password created by the user is used for authentication of application startup, setting changes, etc.  </li>
 
 </ul>
 <p><strong><u>*1</u></strong>Data is encrypted and stored.  </p>
+<h4 id='112data-not-to-be-saved'>1.1.2.Data not to be saved  </h4>
+<p>The following data will not be saved.  </p>
+<ul>
+<li>Password to protect data in &quot;1.4. Send or export data outside SMBSync2&quot; <br/>The password will be discarded and not saved when the process is finished.  </li>
+
+</ul>
 <h3 id='12execution-result-of-smbsync3'>1.2.Execution result of SMBSync3  </h3>
 <p>Save the data to the storage area in the application so that the user can check the execution result of SMBSync3.  </p>
 <ul>
@@ -24,8 +31,8 @@
 <li>Error information  </li>
 
 </ul>
-<h3 id='13activity-record-of-smbsync3'>1.3.Activity record of SMBSync3  </h3>
-<p>Enabling logging will save the activity record data in the app&#39;s memory area for verification of the app&#39;s execution results and technical support. When logging is disabled, data recording will be stopped. However, the data already recorded will not be deleted, so you can delete it if you need to.  </p>
+<h3 id='13activity-log-of-smbsync3'>1.3.Activity log of SMBSync3  </h3>
+<p>When logging is enabled, activity data will be stored in the app&#39;s memory area for verification of the app&#39;s execution results and for technical support. If logging is disabled, data recording will be stopped, however, data already recorded will not be deleted.  </p>
 <ul>
 <li>Device information (manufacturer name, model name, OS version, mount point, app-specific directory, StorageAccessFramework, Storage manager, IP address, WiFi enable/disable, WiFi link speed)  </li>
 <li>SMBSync3 version, SMBSync3 execution options  </li>
@@ -40,23 +47,23 @@
 <ul>
 <li>Press &quot;Share button&quot; from History tab.  </li>
 <li>Click &quot;Send to Developer&quot; button from System Information.  </li>
-<li>Click the &quot;Send to Developer&quot; button from the log management.  </li>
+<li>Click the &quot;Share&quot; button from the log management.  </li>
+<li>Click the &quot;Send to Developer&quot; button from the log management.<br/>If you specify a password, the attached file will be password protected. The password will be discarded when you close the screen and will not be saved.  </li>
 <li>Export to external storage by clicking &quot;Export log file&quot; button from Log Management.  </li>
-<li>By executing &quot;Export settings&quot; from the menu, &quot;1.1. Data provided to SMBSync3 from users&quot; will be exported.<br/>The information will be encrypted by specifying a password when exporting.  </li>
+<li>By executing &quot;Export settings&quot; from the menu, &quot;1.1. Data provided to SMBSync3 from users&quot; will be exported.<br/>The information will be encrypted by specifying a password when exporting. The password will be discarded when you close the screen and will not be saved.  </li>
 
 </ul>
 <h3 id='15delete-the-data-stored-in-smbsync3'>1.5.Delete the data stored in SMBSync3  </h3>
-<p>By uninstalling SMBSync3, the saved data (&quot;1.1. Data provided by user to SMBSync3&quot;, &quot;1.2. Execution result of SMBSync3&quot;, &quot;1.3. Activity record of SMBSync3&quot;) will be deleted from the device.<br/><span style="color: red;"><u>However, data stored in external storage due to user interaction will not be deleted.</u></span>  </p>
+<p>By uninstalling SMBSync3, the saved data (&quot;1.1. Data provided by user to SMBSync3&quot;, &quot;1.2. Execution result of SMBSync3&quot;, &quot;1.3.Activity log of SMBSync3&quot;) will be deleted from the device.<br/><span style="color: red;"><u>However, data stored in external storage due to user interaction will not be deleted.</u></span>  </p>
 <h3 id='2permissions-required-to-run-the-application'>2.Permissions required to run the application  </h3>
 <h3 id='21storage'>2.1.Storage  </h3>
 <h3 id='211android-11-or-later'>2.1.1.Android 11 or later  </h3>
-<p><strong>All file access</strong>.  </p>
-<p>Used for file synchronization and reading/writing management files.  </p>
+<p><strong><u>All file access</u></strong><br/>Used for file synchronization and reading/writing management files.  </p>
 <h3 id='212android-10-or-before'>2.1.2.Android 10 or before  </h3>
 <h3 id='21photos-media-and-files'>2.1.Photos, Media and Files  </h3>
-<p><strong>&quot;read the contents of your USB storage&quot;</strong><br/><strong>&quot;modify or delete the contents of your USB storage&quot;</strong><br/>Used for file synchronization and reading/writing management files.  </p>
+<p><strong><u>read the contents of your USB storage</u></strong><br/><strong><u>modify or delete the contents of your USB storage</u></strong><br/>Used for file synchronization and reading/writing management files.  </p>
 <h3 id='22wi-fi-connection-information'>2.2.Wi-Fi connection information  </h3>
-<p><strong>view Wi-Fi connections</strong>.<br/>Used to check the Wi-Fi status when synchronization starts.  </p>
+<p><strong>view Wi-Fi connections</strong>.<br/>Use this to check network connections when starting synchronization.  </p>
 <h3 id='23others'>2.3.Others  </h3>
 <h3 id='231view-network-connections'>2.3.1.View network connections  </h3>
 <p>Use this to check network connections when starting synchronization.  </p>
@@ -65,11 +72,11 @@
 <h3 id='233full-network-access'>2.3.3.Full network access  </h3>
 <p>Use this to synchronize via SMB protocol through the network.  </p>
 <h3 id='234run-at-startup'>2.3.4.Run at startup  </h3>
-<p>Used to perform scheduled synchronization.  </p>
+<p>Used to initialize scheduled synchronization upon device reboot.  </p>
 <h3 id='235control-vibration'>2.3.5.Control vibration  </h3>
 <p>Used to notify the user when synchronization is finished.  </p>
 <h3 id='236prevent-device-from-sleeping'>2.3.6.Prevent device from sleeping  </h3>
-<p>Used to start synchronization from a schedule or external app.  </p>
+<p>Used to prevent the device from going to sleep during synchronization.  </p>
 <h3 id='237install-shortcuts'>2.3.7.Install shortcuts  </h3>
 <p>Used to add sync start shortcuts to the desktop.  </p>
 </body>
