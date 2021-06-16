@@ -1207,9 +1207,17 @@ src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times
 </span></span>Ignore files with a file size of 0 Bytes  </p>
 
 <p class=MsoListParagraph style='margin-left:18.0pt'>If checked, files with a
-file size of 0 bytes will be ignored.  </p>
+file size of 0 bytes will be ignored.</p>
 
-<p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+style='font-family:Symbol'><img width=11 height=11
+src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Ignore the file if the length of the file name is longer than the
+specified value</p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>Specifies
+the maximum length (in bytes) of the output file name. Ignores the file if the
+number of bytes in the file name exceeds the maximum.</p>
 
 <p class=MsoBodyText align=left style='text-align:left'><a href="#_top">Return
 to Index</a>  </p>
@@ -1280,8 +1288,9 @@ text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
 src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>User name</p>
 
-<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
-specify userid for host.</p>
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'>To
+specify userid for host. (You cannot use a Microsoft account. Please create a
+local account)</p>
 
 <p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
 text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
@@ -1289,15 +1298,7 @@ src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times
 </span></span>Password</p>
 
 <p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>To
-specify password for host.</p>
-
-<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
-text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
-src="SMBSync2_Desc_EN.files/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Logon</p>
-
-<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'>Logon
-to specified remote host.</p>
+specify password for local account.</p>
 
 <p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
 text-indent:-21.0pt'><span style='font-family:Symbol'><img width=11 height=11
@@ -2131,10 +2132,10 @@ src="SMBSync2_Desc_EN.files/image007.png"></p>
 
 <p class=MsoBodyText align=left style='text-align:left'>&nbsp;</p>
 
-<p class=MsoBodyText align=left style='text-align:left'>The above is a
-representation of how the directories and files that are included to /DIR-A is
-specified DIR filter in the case of Checked “Handling files and directories
-master directory” is to be selected.</p>
+<p class=MsoBodyText align=left style='text-align:left'>The above is a representation
+of how the directories and files that are included to /DIR-A is specified DIR
+filter in the case of Checked “Handling files and directories master directory”
+is to be selected.</p>
 
 <p class=MsoBodyText align=left style='text-align:left'>The results are
 processed only file FILE-01.TXT DIR-AB, and DIR-AC is selected.</p>
@@ -2879,7 +2880,8 @@ src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times
 
 <p class=MsoNormal style='margin-left:42.0pt'>If you do not check it,
 re-authentication will not be performed until the application is terminated.
-However, when displaying the security detail setting screen, always re-authenticate.</p>
+However, when displaying the security detail setting screen, always
+re-authenticate.</p>
 
 <p class=MsoNormal align=left style='margin-left:42.55pt;text-align:left;
 text-indent:-21.25pt'><span style='font-family:Symbol'><img width=11 height=11
@@ -2911,8 +2913,7 @@ until the correct password is entered.</p>
 <p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
 text-indent:-41.7pt'><span style='font-family:Symbol'><img width=11 height=11
 src="SMBSync2_Desc_EN.files/image002.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Hide the saved account name and password when editing the SMB
-folder</p>
+</span></span>Hide the saved account name and password when editing the SMB folder</p>
 
 <p class=MsoNormal style='margin-left:42.0pt'>When checked, the saved account
 name and password will be blank, so please enter your account name and password
@@ -2976,8 +2977,7 @@ specifying its UUID when it is recognized as SDCARD.</p>
 <p class=MsoNormal>However, the USB media must be recognized as
 ExternalFilesDirs. (You can check this in Menu-&gt;System Info)</p>
 
-<p class=MsoNormal>In the example below, the UUID is 087A-771C is the USB
-media.</p>
+<p class=MsoNormal>In the example below, the UUID is 087A-771C is the USB media.</p>
 
 <p class=MsoNormal><span style='position:absolute;z-index:1;left:0px;
 margin-left:3px;margin-top:56px;width:481px;height:79px'><img width=481
@@ -3248,7 +3248,8 @@ style='font-size:10.0pt'>super.onCreate(savedInstanceState);</span></p>
 style='font-size:10.0pt'>setContentView(R.layout.activity_main);</span></p>
 
 <p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
-style='font-size:10.0pt'>Intent in=new Intent(&quot;com.sentaroh.android.SMBSync2.ACTION_START_SYNC&quot;);</span></p>
+style='font-size:10.0pt'>Intent in=new
+Intent(&quot;com.sentaroh.android.SMBSync2.ACTION_START_SYNC&quot;);</span></p>
 
 <p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
 style='font-size:10.0pt'>String prof=
