@@ -2,9 +2,11 @@
 
 ### Manuals
 
+- [Change history](https://sentaroh.github.io/Documents/SMBSync2/SMBSync2_Change_EN.html)
 - [Feature Description](https://sentaroh.github.io/Documents/SMBSync2/SMBSync2_Desc_EN.htm)
 - [Log](https://sentaroh.github.io/Documents/SMBSync2/SMBSync2_Log_EN.htm)
 - [Log-Verbose](https://sentaroh.github.io/Documents/SMBSync2/SMBSync2_LogVerbose_EN.htm)
+- [変更履歴](https://sentaroh.github.io/Documents/SMBSync2/SMBSync2_Change_JA.html)
 - [機能の説明](https://sentaroh.github.io/Documents/SMBSync2/SMBSync2_Desc_JA.htm)
 - [ログ](https://sentaroh.github.io/Documents/SMBSync2/SMBSync2_Log_JA.htm)
 - [詳細ログ](https://sentaroh.github.io/Documents/SMBSync2/SMBSync2_LogVerbose_JA.htm)
